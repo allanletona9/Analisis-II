@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{09CBF558-8D66-4C0A-B071-DF7F3C746776}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Polideportivo</RootNamespace>
+    <AssemblyName>Polideportivo</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Calendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calendario.Designer.cs">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CambiarClave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambiarClave.Designer.cs">
+      <DependentUpon>CambiarClave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiccionarioConceptos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiccionarioConceptos.Designer.cs">
+      <DependentUpon>DiccionarioConceptos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MejoresJugadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MejoresJugadores.Designer.cs">
+      <DependentUpon>MejoresJugadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MisJugadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MisJugadores.Designer.cs">
+      <DependentUpon>MisJugadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Partidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Partidos.Designer.cs">
+      <DependentUpon>Partidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PreguntasFrecuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreguntasFrecuentas.Designer.cs">
+      <DependentUpon>PreguntasFrecuentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sanciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sanciones.Designer.cs">
+      <DependentUpon>Sanciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeleccionarEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeleccionarEquipo.Designer.cs">
+      <DependentUpon>SeleccionarEquipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TablaPosiciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TablaPosiciones.Designer.cs">
+      <DependentUpon>TablaPosiciones.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Calendario.resx">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CambiarClave.resx">
+      <DependentUpon>CambiarClave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiccionarioConceptos.resx">
+      <DependentUpon>DiccionarioConceptos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MejoresJugadores.resx">
+      <DependentUpon>MejoresJugadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MisJugadores.resx">
+      <DependentUpon>MisJugadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Partidos.resx">
+      <DependentUpon>Partidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreguntasFrecuentas.resx">
+      <DependentUpon>PreguntasFrecuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Sanciones.resx">
+      <DependentUpon>Sanciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeleccionarEquipo.resx">
+      <DependentUpon>SeleccionarEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TablaPosiciones.resx">
+      <DependentUpon>TablaPosiciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
