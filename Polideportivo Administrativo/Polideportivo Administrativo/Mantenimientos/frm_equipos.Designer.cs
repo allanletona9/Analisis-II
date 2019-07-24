@@ -39,6 +39,7 @@
             this.Btn_ingresarEquipo = new System.Windows.Forms.Button();
             this.Btn_seleccionar = new System.Windows.Forms.Button();
             this.Dgv_equipos = new System.Windows.Forms.DataGridView();
+            this.Btn_actualizar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_equipos)).BeginInit();
@@ -53,8 +54,9 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(926, 49);
+            this.panel1.Size = new System.Drawing.Size(1234, 61);
             this.panel1.TabIndex = 7;
             // 
             // Btn_cerrar
@@ -63,9 +65,10 @@
             this.Btn_cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_cerrar.ForeColor = System.Drawing.Color.DarkRed;
-            this.Btn_cerrar.Location = new System.Drawing.Point(880, 3);
+            this.Btn_cerrar.Location = new System.Drawing.Point(1174, 4);
+            this.Btn_cerrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Btn_cerrar.Name = "Btn_cerrar";
-            this.Btn_cerrar.Size = new System.Drawing.Size(46, 43);
+            this.Btn_cerrar.Size = new System.Drawing.Size(62, 56);
             this.Btn_cerrar.TabIndex = 7;
             this.Btn_cerrar.UseVisualStyleBackColor = false;
             this.Btn_cerrar.Click += new System.EventHandler(this.button1_Click);
@@ -75,7 +78,7 @@
             this.Lbl_equipos.AutoSize = true;
             this.Lbl_equipos.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_equipos.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.Lbl_equipos.Location = new System.Drawing.Point(45, 12);
+            this.Lbl_equipos.Location = new System.Drawing.Point(57, 17);
             this.Lbl_equipos.Name = "Lbl_equipos";
             this.Lbl_equipos.Size = new System.Drawing.Size(97, 24);
             this.Lbl_equipos.TabIndex = 2;
@@ -84,9 +87,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Polideportivo_Administrativo.Properties.Resources.icons8_modo_deportes_24;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(16, 16);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(27, 27);
+            this.pictureBox2.Size = new System.Drawing.Size(35, 35);
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
@@ -94,7 +98,7 @@
             // 
             this.Lbl_buscar.AutoSize = true;
             this.Lbl_buscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_buscar.Location = new System.Drawing.Point(736, 70);
+            this.Lbl_buscar.Location = new System.Drawing.Point(982, 91);
             this.Lbl_buscar.Name = "Lbl_buscar";
             this.Lbl_buscar.Size = new System.Drawing.Size(49, 17);
             this.Lbl_buscar.TabIndex = 20;
@@ -103,27 +107,31 @@
             // Txt_buscar
             // 
             this.Txt_buscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_buscar.Location = new System.Drawing.Point(739, 98);
+            this.Txt_buscar.Location = new System.Drawing.Point(985, 129);
+            this.Txt_buscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Txt_buscar.Name = "Txt_buscar";
-            this.Txt_buscar.Size = new System.Drawing.Size(166, 23);
+            this.Txt_buscar.Size = new System.Drawing.Size(220, 23);
             this.Txt_buscar.TabIndex = 19;
             // 
             // Btn_buscar
             // 
             this.Btn_buscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_buscar.Location = new System.Drawing.Point(739, 136);
+            this.Btn_buscar.Location = new System.Drawing.Point(985, 177);
+            this.Btn_buscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Btn_buscar.Name = "Btn_buscar";
-            this.Btn_buscar.Size = new System.Drawing.Size(166, 29);
+            this.Btn_buscar.Size = new System.Drawing.Size(222, 38);
             this.Btn_buscar.TabIndex = 18;
             this.Btn_buscar.Text = "Buscar";
             this.Btn_buscar.UseVisualStyleBackColor = true;
+            this.Btn_buscar.Click += new System.EventHandler(this.Btn_buscar_Click);
             // 
             // Btn_salida
             // 
             this.Btn_salida.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_salida.Location = new System.Drawing.Point(739, 554);
+            this.Btn_salida.Location = new System.Drawing.Point(985, 725);
+            this.Btn_salida.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Btn_salida.Name = "Btn_salida";
-            this.Btn_salida.Size = new System.Drawing.Size(166, 32);
+            this.Btn_salida.Size = new System.Drawing.Size(222, 41);
             this.Btn_salida.TabIndex = 17;
             this.Btn_salida.Text = "Salir";
             this.Btn_salida.UseVisualStyleBackColor = true;
@@ -131,9 +139,10 @@
             // Btn_ingresarEquipo
             // 
             this.Btn_ingresarEquipo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_ingresarEquipo.Location = new System.Drawing.Point(739, 205);
+            this.Btn_ingresarEquipo.Location = new System.Drawing.Point(983, 316);
+            this.Btn_ingresarEquipo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Btn_ingresarEquipo.Name = "Btn_ingresarEquipo";
-            this.Btn_ingresarEquipo.Size = new System.Drawing.Size(166, 46);
+            this.Btn_ingresarEquipo.Size = new System.Drawing.Size(222, 61);
             this.Btn_ingresarEquipo.TabIndex = 16;
             this.Btn_ingresarEquipo.Text = "Ingresar Nuevo Equipo";
             this.Btn_ingresarEquipo.UseVisualStyleBackColor = true;
@@ -142,26 +151,46 @@
             // Btn_seleccionar
             // 
             this.Btn_seleccionar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_seleccionar.Location = new System.Drawing.Point(739, 171);
+            this.Btn_seleccionar.Location = new System.Drawing.Point(985, 223);
+            this.Btn_seleccionar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Btn_seleccionar.Name = "Btn_seleccionar";
-            this.Btn_seleccionar.Size = new System.Drawing.Size(166, 28);
+            this.Btn_seleccionar.Size = new System.Drawing.Size(222, 36);
             this.Btn_seleccionar.TabIndex = 15;
             this.Btn_seleccionar.Text = "Seleccionar";
             this.Btn_seleccionar.UseVisualStyleBackColor = true;
+            this.Btn_seleccionar.Click += new System.EventHandler(this.Btn_seleccionar_Click);
             // 
             // Dgv_equipos
             // 
+            this.Dgv_equipos.AllowUserToAddRows = false;
+            this.Dgv_equipos.AllowUserToDeleteRows = false;
+            this.Dgv_equipos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Dgv_equipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgv_equipos.Location = new System.Drawing.Point(24, 70);
+            this.Dgv_equipos.Location = new System.Drawing.Point(54, 91);
+            this.Dgv_equipos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Dgv_equipos.Name = "Dgv_equipos";
-            this.Dgv_equipos.Size = new System.Drawing.Size(689, 516);
+            this.Dgv_equipos.ReadOnly = true;
+            this.Dgv_equipos.Size = new System.Drawing.Size(896, 675);
             this.Dgv_equipos.TabIndex = 14;
+            // 
+            // Btn_actualizar
+            // 
+            this.Btn_actualizar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_actualizar.Location = new System.Drawing.Point(983, 267);
+            this.Btn_actualizar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Btn_actualizar.Name = "Btn_actualizar";
+            this.Btn_actualizar.Size = new System.Drawing.Size(222, 41);
+            this.Btn_actualizar.TabIndex = 21;
+            this.Btn_actualizar.Text = "Actualizar Tabla";
+            this.Btn_actualizar.UseVisualStyleBackColor = true;
+            this.Btn_actualizar.Click += new System.EventHandler(this.Btn_actualizar_Click);
             // 
             // frm_equipos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(926, 619);
+            this.ClientSize = new System.Drawing.Size(1234, 810);
+            this.Controls.Add(this.Btn_actualizar);
             this.Controls.Add(this.Lbl_buscar);
             this.Controls.Add(this.Txt_buscar);
             this.Controls.Add(this.Btn_buscar);
@@ -170,7 +199,9 @@
             this.Controls.Add(this.Btn_seleccionar);
             this.Controls.Add(this.Dgv_equipos);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frm_equipos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Equipos";
@@ -197,5 +228,6 @@
         private System.Windows.Forms.Button Btn_ingresarEquipo;
         private System.Windows.Forms.Button Btn_seleccionar;
         private System.Windows.Forms.DataGridView Dgv_equipos;
+        private System.Windows.Forms.Button Btn_actualizar;
     }
 }

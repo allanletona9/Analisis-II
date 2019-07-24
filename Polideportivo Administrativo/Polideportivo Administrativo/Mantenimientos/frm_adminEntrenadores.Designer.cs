@@ -46,6 +46,8 @@
             this.Gpb_estado = new System.Windows.Forms.GroupBox();
             this.Rbd_deshabilitado = new System.Windows.Forms.RadioButton();
             this.Rdb_habilitado = new System.Windows.Forms.RadioButton();
+            this.Txt_codigoEntrenador = new System.Windows.Forms.TextBox();
+            this.Lbl_codigoEntrenador = new System.Windows.Forms.Label();
             this.Pnl_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Gpb_estado.SuspendLayout();
@@ -281,11 +283,31 @@
             this.Rdb_habilitado.Text = "Habilitado";
             this.Rdb_habilitado.UseVisualStyleBackColor = true;
             // 
+            // Txt_codigoEntrenador
+            // 
+            this.Txt_codigoEntrenador.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_codigoEntrenador.Location = new System.Drawing.Point(432, 197);
+            this.Txt_codigoEntrenador.Name = "Txt_codigoEntrenador";
+            this.Txt_codigoEntrenador.Size = new System.Drawing.Size(230, 23);
+            this.Txt_codigoEntrenador.TabIndex = 191;
+            // 
+            // Lbl_codigoEntrenador
+            // 
+            this.Lbl_codigoEntrenador.AutoSize = true;
+            this.Lbl_codigoEntrenador.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_codigoEntrenador.Location = new System.Drawing.Point(250, 203);
+            this.Lbl_codigoEntrenador.Name = "Lbl_codigoEntrenador";
+            this.Lbl_codigoEntrenador.Size = new System.Drawing.Size(133, 17);
+            this.Lbl_codigoEntrenador.TabIndex = 190;
+            this.Lbl_codigoEntrenador.Text = "Codigo Entrenador";
+            // 
             // frm_adminEntrenadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(910, 580);
+            this.Controls.Add(this.Txt_codigoEntrenador);
+            this.Controls.Add(this.Lbl_codigoEntrenador);
             this.Controls.Add(this.Gpb_estado);
             this.Controls.Add(this.Btn_salir);
             this.Controls.Add(this.Btn_ingresar);
@@ -334,5 +356,7 @@
         private System.Windows.Forms.GroupBox Gpb_estado;
         private System.Windows.Forms.RadioButton Rbd_deshabilitado;
         private System.Windows.Forms.RadioButton Rdb_habilitado;
+        public System.Windows.Forms.TextBox Txt_codigoEntrenador;
+        private System.Windows.Forms.Label Lbl_codigoEntrenador;
     }
 }

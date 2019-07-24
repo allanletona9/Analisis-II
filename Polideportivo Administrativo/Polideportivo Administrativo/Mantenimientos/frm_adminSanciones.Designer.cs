@@ -44,6 +44,8 @@
             this.Btn_cerrar = new System.Windows.Forms.Button();
             this.Lbl_administracionArbitros = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Txt_codigoSancion = new System.Windows.Forms.TextBox();
+            this.Lbl_codigoSancion = new System.Windows.Forms.Label();
             this.Gpb_estado.SuspendLayout();
             this.Pnl_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -52,7 +54,7 @@
             // Txt_descripcionSancion
             // 
             this.Txt_descripcionSancion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_descripcionSancion.Location = new System.Drawing.Point(389, 305);
+            this.Txt_descripcionSancion.Location = new System.Drawing.Point(396, 328);
             this.Txt_descripcionSancion.Name = "Txt_descripcionSancion";
             this.Txt_descripcionSancion.Size = new System.Drawing.Size(230, 23);
             this.Txt_descripcionSancion.TabIndex = 155;
@@ -60,7 +62,7 @@
             // Txt_nombreSancion
             // 
             this.Txt_nombreSancion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_nombreSancion.Location = new System.Drawing.Point(389, 251);
+            this.Txt_nombreSancion.Location = new System.Drawing.Point(396, 274);
             this.Txt_nombreSancion.Name = "Txt_nombreSancion";
             this.Txt_nombreSancion.Size = new System.Drawing.Size(230, 23);
             this.Txt_nombreSancion.TabIndex = 154;
@@ -69,7 +71,7 @@
             // 
             this.Lbl_descripcion.AutoSize = true;
             this.Lbl_descripcion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_descripcion.Location = new System.Drawing.Point(245, 308);
+            this.Lbl_descripcion.Location = new System.Drawing.Point(252, 331);
             this.Lbl_descripcion.Name = "Lbl_descripcion";
             this.Lbl_descripcion.Size = new System.Drawing.Size(138, 17);
             this.Lbl_descripcion.TabIndex = 153;
@@ -79,7 +81,7 @@
             // 
             this.Lbl_sancion.AutoSize = true;
             this.Lbl_sancion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_sancion.Location = new System.Drawing.Point(245, 254);
+            this.Lbl_sancion.Location = new System.Drawing.Point(252, 277);
             this.Lbl_sancion.Name = "Lbl_sancion";
             this.Lbl_sancion.Size = new System.Drawing.Size(116, 17);
             this.Lbl_sancion.TabIndex = 152;
@@ -261,11 +263,31 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // Txt_codigoSancion
+            // 
+            this.Txt_codigoSancion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_codigoSancion.Location = new System.Drawing.Point(397, 229);
+            this.Txt_codigoSancion.Name = "Txt_codigoSancion";
+            this.Txt_codigoSancion.Size = new System.Drawing.Size(230, 23);
+            this.Txt_codigoSancion.TabIndex = 158;
+            // 
+            // Lbl_codigoSancion
+            // 
+            this.Lbl_codigoSancion.AutoSize = true;
+            this.Lbl_codigoSancion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_codigoSancion.Location = new System.Drawing.Point(252, 232);
+            this.Lbl_codigoSancion.Name = "Lbl_codigoSancion";
+            this.Lbl_codigoSancion.Size = new System.Drawing.Size(113, 17);
+            this.Lbl_codigoSancion.TabIndex = 157;
+            this.Lbl_codigoSancion.Text = "Codigo Sancion";
+            // 
             // frm_adminSanciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(910, 580);
+            this.Controls.Add(this.Txt_codigoSancion);
+            this.Controls.Add(this.Lbl_codigoSancion);
             this.Controls.Add(this.Txt_descripcionSancion);
             this.Controls.Add(this.Txt_nombreSancion);
             this.Controls.Add(this.Lbl_descripcion);
@@ -310,5 +332,7 @@
         private System.Windows.Forms.Button Btn_cerrar;
         private System.Windows.Forms.Label Lbl_administracionArbitros;
         private System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.TextBox Txt_codigoSancion;
+        private System.Windows.Forms.Label Lbl_codigoSancion;
     }
 }

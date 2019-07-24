@@ -52,6 +52,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.Lbl_horarioCampeonato = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Txt_codigoCampeonato = new System.Windows.Forms.TextBox();
+            this.Lbl_codigoCampeonato = new System.Windows.Forms.Label();
             this.Pnl_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Gpb_estado.SuspendLayout();
@@ -106,7 +108,7 @@
             // Txt_apellidoArbitro
             // 
             this.Txt_apellidoArbitro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_apellidoArbitro.Location = new System.Drawing.Point(442, 254);
+            this.Txt_apellidoArbitro.Location = new System.Drawing.Point(448, 272);
             this.Txt_apellidoArbitro.Name = "Txt_apellidoArbitro";
             this.Txt_apellidoArbitro.Size = new System.Drawing.Size(230, 23);
             this.Txt_apellidoArbitro.TabIndex = 155;
@@ -114,7 +116,7 @@
             // Txt_nombreArbitro
             // 
             this.Txt_nombreArbitro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_nombreArbitro.Location = new System.Drawing.Point(442, 216);
+            this.Txt_nombreArbitro.Location = new System.Drawing.Point(448, 234);
             this.Txt_nombreArbitro.Name = "Txt_nombreArbitro";
             this.Txt_nombreArbitro.Size = new System.Drawing.Size(230, 23);
             this.Txt_nombreArbitro.TabIndex = 154;
@@ -123,7 +125,7 @@
             // 
             this.Lbl_descripcionCampeonato.AutoSize = true;
             this.Lbl_descripcionCampeonato.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_descripcionCampeonato.Location = new System.Drawing.Point(259, 257);
+            this.Lbl_descripcionCampeonato.Location = new System.Drawing.Point(265, 275);
             this.Lbl_descripcionCampeonato.Name = "Lbl_descripcionCampeonato";
             this.Lbl_descripcionCampeonato.Size = new System.Drawing.Size(177, 17);
             this.Lbl_descripcionCampeonato.TabIndex = 153;
@@ -133,7 +135,7 @@
             // 
             this.Lbl_nombreCampeonato.AutoSize = true;
             this.Lbl_nombreCampeonato.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_nombreCampeonato.Location = new System.Drawing.Point(259, 216);
+            this.Lbl_nombreCampeonato.Location = new System.Drawing.Point(265, 234);
             this.Lbl_nombreCampeonato.Name = "Lbl_nombreCampeonato";
             this.Lbl_nombreCampeonato.Size = new System.Drawing.Size(155, 17);
             this.Lbl_nombreCampeonato.TabIndex = 152;
@@ -273,7 +275,7 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(442, 180);
+            this.comboBox1.Location = new System.Drawing.Point(448, 198);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(230, 25);
             this.comboBox1.TabIndex = 156;
@@ -282,7 +284,7 @@
             // 
             this.Lbl_deporte.AutoSize = true;
             this.Lbl_deporte.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_deporte.Location = new System.Drawing.Point(260, 184);
+            this.Lbl_deporte.Location = new System.Drawing.Point(266, 202);
             this.Lbl_deporte.Name = "Lbl_deporte";
             this.Lbl_deporte.Size = new System.Drawing.Size(61, 17);
             this.Lbl_deporte.TabIndex = 157;
@@ -292,7 +294,7 @@
             // 
             this.Lbl_cantidadEquipos.AutoSize = true;
             this.Lbl_cantidadEquipos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_cantidadEquipos.Location = new System.Drawing.Point(260, 298);
+            this.Lbl_cantidadEquipos.Location = new System.Drawing.Point(266, 316);
             this.Lbl_cantidadEquipos.Name = "Lbl_cantidadEquipos";
             this.Lbl_cantidadEquipos.Size = new System.Drawing.Size(146, 17);
             this.Lbl_cantidadEquipos.TabIndex = 158;
@@ -301,7 +303,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(442, 295);
+            this.textBox1.Location = new System.Drawing.Point(448, 313);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(230, 23);
             this.textBox1.TabIndex = 159;
@@ -310,7 +312,7 @@
             // 
             this.Lbl_diaCampeonato.AutoSize = true;
             this.Lbl_diaCampeonato.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_diaCampeonato.Location = new System.Drawing.Point(260, 337);
+            this.Lbl_diaCampeonato.Location = new System.Drawing.Point(266, 355);
             this.Lbl_diaCampeonato.Name = "Lbl_diaCampeonato";
             this.Lbl_diaCampeonato.Size = new System.Drawing.Size(124, 17);
             this.Lbl_diaCampeonato.TabIndex = 160;
@@ -319,7 +321,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(442, 334);
+            this.textBox2.Location = new System.Drawing.Point(448, 352);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(230, 23);
             this.textBox2.TabIndex = 161;
@@ -328,7 +330,7 @@
             // 
             this.Lbl_horarioCampeonato.AutoSize = true;
             this.Lbl_horarioCampeonato.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_horarioCampeonato.Location = new System.Drawing.Point(260, 373);
+            this.Lbl_horarioCampeonato.Location = new System.Drawing.Point(266, 391);
             this.Lbl_horarioCampeonato.Name = "Lbl_horarioCampeonato";
             this.Lbl_horarioCampeonato.Size = new System.Drawing.Size(149, 17);
             this.Lbl_horarioCampeonato.TabIndex = 162;
@@ -337,16 +339,36 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(442, 370);
+            this.textBox3.Location = new System.Drawing.Point(448, 388);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(230, 23);
             this.textBox3.TabIndex = 163;
+            // 
+            // Txt_codigoCampeonato
+            // 
+            this.Txt_codigoCampeonato.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_codigoCampeonato.Location = new System.Drawing.Point(448, 166);
+            this.Txt_codigoCampeonato.Name = "Txt_codigoCampeonato";
+            this.Txt_codigoCampeonato.Size = new System.Drawing.Size(230, 23);
+            this.Txt_codigoCampeonato.TabIndex = 165;
+            // 
+            // Lbl_codigoCampeonato
+            // 
+            this.Lbl_codigoCampeonato.AutoSize = true;
+            this.Lbl_codigoCampeonato.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_codigoCampeonato.Location = new System.Drawing.Point(266, 169);
+            this.Lbl_codigoCampeonato.Name = "Lbl_codigoCampeonato";
+            this.Lbl_codigoCampeonato.Size = new System.Drawing.Size(152, 17);
+            this.Lbl_codigoCampeonato.TabIndex = 164;
+            this.Lbl_codigoCampeonato.Text = "Codigo Campeonato";
             // 
             // frm_adminCampeonatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(910, 580);
+            this.Controls.Add(this.Txt_codigoCampeonato);
+            this.Controls.Add(this.Lbl_codigoCampeonato);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.Lbl_horarioCampeonato);
             this.Controls.Add(this.textBox2);
@@ -406,5 +428,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label Lbl_horarioCampeonato;
         private System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox Txt_codigoCampeonato;
+        private System.Windows.Forms.Label Lbl_codigoCampeonato;
     }
 }

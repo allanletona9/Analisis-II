@@ -44,6 +44,8 @@
             this.Btn_cerrar = new System.Windows.Forms.Button();
             this.Lbl_administracionArbitros = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Txt_codigoDeporte = new System.Windows.Forms.TextBox();
+            this.Lbl_codigoDeporte = new System.Windows.Forms.Label();
             this.Gpb_estado.SuspendLayout();
             this.Pnl_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -52,7 +54,7 @@
             // Txt_descripcionDeporte
             // 
             this.Txt_descripcionDeporte.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_descripcionDeporte.Location = new System.Drawing.Point(414, 302);
+            this.Txt_descripcionDeporte.Location = new System.Drawing.Point(424, 324);
             this.Txt_descripcionDeporte.Name = "Txt_descripcionDeporte";
             this.Txt_descripcionDeporte.Size = new System.Drawing.Size(230, 23);
             this.Txt_descripcionDeporte.TabIndex = 154;
@@ -60,7 +62,7 @@
             // Txt_nombreDeporte
             // 
             this.Txt_nombreDeporte.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_nombreDeporte.Location = new System.Drawing.Point(414, 248);
+            this.Txt_nombreDeporte.Location = new System.Drawing.Point(424, 270);
             this.Txt_nombreDeporte.Name = "Txt_nombreDeporte";
             this.Txt_nombreDeporte.Size = new System.Drawing.Size(230, 23);
             this.Txt_nombreDeporte.TabIndex = 153;
@@ -69,7 +71,7 @@
             // 
             this.Lbl_descripcionDeporte.AutoSize = true;
             this.Lbl_descripcionDeporte.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_descripcionDeporte.Location = new System.Drawing.Point(265, 305);
+            this.Lbl_descripcionDeporte.Location = new System.Drawing.Point(275, 327);
             this.Lbl_descripcionDeporte.Name = "Lbl_descripcionDeporte";
             this.Lbl_descripcionDeporte.Size = new System.Drawing.Size(140, 17);
             this.Lbl_descripcionDeporte.TabIndex = 152;
@@ -79,7 +81,7 @@
             // 
             this.Lbl_nombreDeporte.AutoSize = true;
             this.Lbl_nombreDeporte.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_nombreDeporte.Location = new System.Drawing.Point(265, 251);
+            this.Lbl_nombreDeporte.Location = new System.Drawing.Point(275, 273);
             this.Lbl_nombreDeporte.Name = "Lbl_nombreDeporte";
             this.Lbl_nombreDeporte.Size = new System.Drawing.Size(118, 17);
             this.Lbl_nombreDeporte.TabIndex = 151;
@@ -261,11 +263,31 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // Txt_codigoDeporte
+            // 
+            this.Txt_codigoDeporte.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_codigoDeporte.Location = new System.Drawing.Point(424, 222);
+            this.Txt_codigoDeporte.Name = "Txt_codigoDeporte";
+            this.Txt_codigoDeporte.Size = new System.Drawing.Size(230, 23);
+            this.Txt_codigoDeporte.TabIndex = 158;
+            // 
+            // Lbl_codigoDeporte
+            // 
+            this.Lbl_codigoDeporte.AutoSize = true;
+            this.Lbl_codigoDeporte.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_codigoDeporte.Location = new System.Drawing.Point(275, 225);
+            this.Lbl_codigoDeporte.Name = "Lbl_codigoDeporte";
+            this.Lbl_codigoDeporte.Size = new System.Drawing.Size(115, 17);
+            this.Lbl_codigoDeporte.TabIndex = 157;
+            this.Lbl_codigoDeporte.Text = "Codigo Deporte";
+            // 
             // frm_adminDeportescs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(910, 580);
+            this.Controls.Add(this.Txt_codigoDeporte);
+            this.Controls.Add(this.Lbl_codigoDeporte);
             this.Controls.Add(this.Pnl_titulo);
             this.Controls.Add(this.Txt_descripcionDeporte);
             this.Controls.Add(this.Txt_nombreDeporte);
@@ -310,5 +332,7 @@
         private System.Windows.Forms.Button Btn_cerrar;
         private System.Windows.Forms.Label Lbl_administracionArbitros;
         private System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.TextBox Txt_codigoDeporte;
+        private System.Windows.Forms.Label Lbl_codigoDeporte;
     }
 }

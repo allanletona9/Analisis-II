@@ -44,6 +44,8 @@
             this.Lbl_apellidoArbitro = new System.Windows.Forms.Label();
             this.Txt_nombreArbitro = new System.Windows.Forms.TextBox();
             this.Txt_apellidoArbitro = new System.Windows.Forms.TextBox();
+            this.Txt_codigoArbitro = new System.Windows.Forms.TextBox();
+            this.Lbl_codigoArbitro = new System.Windows.Forms.Label();
             this.Pnl_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Gpb_estado.SuspendLayout();
@@ -229,7 +231,7 @@
             // 
             this.Lbl_nombreArbitro.AutoSize = true;
             this.Lbl_nombreArbitro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_nombreArbitro.Location = new System.Drawing.Point(258, 236);
+            this.Lbl_nombreArbitro.Location = new System.Drawing.Point(258, 256);
             this.Lbl_nombreArbitro.Name = "Lbl_nombreArbitro";
             this.Lbl_nombreArbitro.Size = new System.Drawing.Size(108, 17);
             this.Lbl_nombreArbitro.TabIndex = 141;
@@ -239,7 +241,7 @@
             // 
             this.Lbl_apellidoArbitro.AutoSize = true;
             this.Lbl_apellidoArbitro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_apellidoArbitro.Location = new System.Drawing.Point(258, 290);
+            this.Lbl_apellidoArbitro.Location = new System.Drawing.Point(258, 310);
             this.Lbl_apellidoArbitro.Name = "Lbl_apellidoArbitro";
             this.Lbl_apellidoArbitro.Size = new System.Drawing.Size(108, 17);
             this.Lbl_apellidoArbitro.TabIndex = 142;
@@ -248,7 +250,7 @@
             // Txt_nombreArbitro
             // 
             this.Txt_nombreArbitro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_nombreArbitro.Location = new System.Drawing.Point(385, 233);
+            this.Txt_nombreArbitro.Location = new System.Drawing.Point(385, 253);
             this.Txt_nombreArbitro.Name = "Txt_nombreArbitro";
             this.Txt_nombreArbitro.Size = new System.Drawing.Size(230, 23);
             this.Txt_nombreArbitro.TabIndex = 143;
@@ -256,16 +258,36 @@
             // Txt_apellidoArbitro
             // 
             this.Txt_apellidoArbitro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_apellidoArbitro.Location = new System.Drawing.Point(385, 287);
+            this.Txt_apellidoArbitro.Location = new System.Drawing.Point(385, 307);
             this.Txt_apellidoArbitro.Name = "Txt_apellidoArbitro";
             this.Txt_apellidoArbitro.Size = new System.Drawing.Size(230, 23);
             this.Txt_apellidoArbitro.TabIndex = 144;
+            // 
+            // Txt_codigoArbitro
+            // 
+            this.Txt_codigoArbitro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_codigoArbitro.Location = new System.Drawing.Point(385, 212);
+            this.Txt_codigoArbitro.Name = "Txt_codigoArbitro";
+            this.Txt_codigoArbitro.Size = new System.Drawing.Size(230, 23);
+            this.Txt_codigoArbitro.TabIndex = 158;
+            // 
+            // Lbl_codigoArbitro
+            // 
+            this.Lbl_codigoArbitro.AutoSize = true;
+            this.Lbl_codigoArbitro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_codigoArbitro.Location = new System.Drawing.Point(258, 215);
+            this.Lbl_codigoArbitro.Name = "Lbl_codigoArbitro";
+            this.Lbl_codigoArbitro.Size = new System.Drawing.Size(105, 17);
+            this.Lbl_codigoArbitro.TabIndex = 157;
+            this.Lbl_codigoArbitro.Text = "Codigo Arbitro";
             // 
             // frm_adminArbitros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(910, 580);
+            this.Controls.Add(this.Txt_codigoArbitro);
+            this.Controls.Add(this.Lbl_codigoArbitro);
             this.Controls.Add(this.Txt_apellidoArbitro);
             this.Controls.Add(this.Txt_nombreArbitro);
             this.Controls.Add(this.Lbl_apellidoArbitro);
@@ -310,5 +332,7 @@
         private System.Windows.Forms.Label Lbl_apellidoArbitro;
         private System.Windows.Forms.TextBox Txt_nombreArbitro;
         private System.Windows.Forms.TextBox Txt_apellidoArbitro;
+        public System.Windows.Forms.TextBox Txt_codigoArbitro;
+        private System.Windows.Forms.Label Lbl_codigoArbitro;
     }
 }

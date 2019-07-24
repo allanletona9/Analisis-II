@@ -44,6 +44,8 @@
             this.Btn_modificar = new System.Windows.Forms.Button();
             this.Btn_eliminar = new System.Windows.Forms.Button();
             this.Btn_guardar = new System.Windows.Forms.Button();
+            this.Lbl_codigoEquipo = new System.Windows.Forms.Label();
+            this.Txt_codigoEquipo = new System.Windows.Forms.TextBox();
             this.Pnl_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Gpb_estado.SuspendLayout();
@@ -98,7 +100,7 @@
             // Txt_descripcionEquipo
             // 
             this.Txt_descripcionEquipo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_descripcionEquipo.Location = new System.Drawing.Point(414, 302);
+            this.Txt_descripcionEquipo.Location = new System.Drawing.Point(417, 327);
             this.Txt_descripcionEquipo.Name = "Txt_descripcionEquipo";
             this.Txt_descripcionEquipo.Size = new System.Drawing.Size(230, 23);
             this.Txt_descripcionEquipo.TabIndex = 154;
@@ -106,7 +108,7 @@
             // Txt_nombreEquipo
             // 
             this.Txt_nombreEquipo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_nombreEquipo.Location = new System.Drawing.Point(414, 248);
+            this.Txt_nombreEquipo.Location = new System.Drawing.Point(417, 273);
             this.Txt_nombreEquipo.Name = "Txt_nombreEquipo";
             this.Txt_nombreEquipo.Size = new System.Drawing.Size(230, 23);
             this.Txt_nombreEquipo.TabIndex = 153;
@@ -115,7 +117,7 @@
             // 
             this.Lbl_descripcionEquipo.AutoSize = true;
             this.Lbl_descripcionEquipo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_descripcionEquipo.Location = new System.Drawing.Point(265, 305);
+            this.Lbl_descripcionEquipo.Location = new System.Drawing.Point(268, 330);
             this.Lbl_descripcionEquipo.Name = "Lbl_descripcionEquipo";
             this.Lbl_descripcionEquipo.Size = new System.Drawing.Size(132, 17);
             this.Lbl_descripcionEquipo.TabIndex = 152;
@@ -125,7 +127,7 @@
             // 
             this.Lbl_nombreEquipo.AutoSize = true;
             this.Lbl_nombreEquipo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_nombreEquipo.Location = new System.Drawing.Point(265, 251);
+            this.Lbl_nombreEquipo.Location = new System.Drawing.Point(268, 276);
             this.Lbl_nombreEquipo.Name = "Lbl_nombreEquipo";
             this.Lbl_nombreEquipo.Size = new System.Drawing.Size(110, 17);
             this.Lbl_nombreEquipo.TabIndex = 151;
@@ -203,6 +205,7 @@
             this.Btn_ingresar.Text = "INGRESAR ";
             this.Btn_ingresar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_ingresar.UseVisualStyleBackColor = false;
+            this.Btn_ingresar.Click += new System.EventHandler(this.Btn_ingresar_Click);
             // 
             // Btn_modificar
             // 
@@ -222,6 +225,7 @@
             this.Btn_modificar.Text = "MODIFICAR ";
             this.Btn_modificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_modificar.UseVisualStyleBackColor = false;
+            this.Btn_modificar.Click += new System.EventHandler(this.Btn_modificar_Click);
             // 
             // Btn_eliminar
             // 
@@ -241,6 +245,7 @@
             this.Btn_eliminar.Text = "ELIMINAR";
             this.Btn_eliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_eliminar.UseVisualStyleBackColor = false;
+            this.Btn_eliminar.Click += new System.EventHandler(this.Btn_eliminar_Click);
             // 
             // Btn_guardar
             // 
@@ -260,12 +265,33 @@
             this.Btn_guardar.Text = "GUARDAR";
             this.Btn_guardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_guardar.UseVisualStyleBackColor = false;
+            this.Btn_guardar.Click += new System.EventHandler(this.Btn_guardar_Click);
+            // 
+            // Lbl_codigoEquipo
+            // 
+            this.Lbl_codigoEquipo.AutoSize = true;
+            this.Lbl_codigoEquipo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_codigoEquipo.Location = new System.Drawing.Point(268, 231);
+            this.Lbl_codigoEquipo.Name = "Lbl_codigoEquipo";
+            this.Lbl_codigoEquipo.Size = new System.Drawing.Size(107, 17);
+            this.Lbl_codigoEquipo.TabIndex = 155;
+            this.Lbl_codigoEquipo.Text = "Codigo Equipo";
+            // 
+            // Txt_codigoEquipo
+            // 
+            this.Txt_codigoEquipo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_codigoEquipo.Location = new System.Drawing.Point(417, 228);
+            this.Txt_codigoEquipo.Name = "Txt_codigoEquipo";
+            this.Txt_codigoEquipo.Size = new System.Drawing.Size(230, 23);
+            this.Txt_codigoEquipo.TabIndex = 156;
             // 
             // frm_adminEquipos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(910, 580);
+            this.Controls.Add(this.Txt_codigoEquipo);
+            this.Controls.Add(this.Lbl_codigoEquipo);
             this.Controls.Add(this.Txt_descripcionEquipo);
             this.Controls.Add(this.Txt_nombreEquipo);
             this.Controls.Add(this.Lbl_descripcionEquipo);
@@ -298,17 +324,19 @@
         private System.Windows.Forms.Button Btn_cerrar;
         private System.Windows.Forms.Label Lbl_administracionArbitros;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox Txt_descripcionEquipo;
-        private System.Windows.Forms.TextBox Txt_nombreEquipo;
         private System.Windows.Forms.Label Lbl_descripcionEquipo;
         private System.Windows.Forms.Label Lbl_nombreEquipo;
-        private System.Windows.Forms.GroupBox Gpb_estado;
-        private System.Windows.Forms.RadioButton Rbd_deshabilitado;
-        private System.Windows.Forms.RadioButton Rdb_habilitado;
         private System.Windows.Forms.Button Btn_salir;
-        private System.Windows.Forms.Button Btn_ingresar;
         public System.Windows.Forms.Button Btn_modificar;
         public System.Windows.Forms.Button Btn_eliminar;
         public System.Windows.Forms.Button Btn_guardar;
+        public System.Windows.Forms.TextBox Txt_nombreEquipo;
+        public System.Windows.Forms.TextBox Txt_descripcionEquipo;
+        public System.Windows.Forms.GroupBox Gpb_estado;
+        public System.Windows.Forms.RadioButton Rbd_deshabilitado;
+        public System.Windows.Forms.RadioButton Rdb_habilitado;
+        private System.Windows.Forms.Label Lbl_codigoEquipo;
+        public System.Windows.Forms.TextBox Txt_codigoEquipo;
+        public System.Windows.Forms.Button Btn_ingresar;
     }
 }

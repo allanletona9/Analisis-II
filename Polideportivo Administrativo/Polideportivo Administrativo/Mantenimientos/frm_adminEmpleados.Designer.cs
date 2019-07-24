@@ -50,6 +50,8 @@
             this.Btn_modificar = new System.Windows.Forms.Button();
             this.Btn_eliminar = new System.Windows.Forms.Button();
             this.Btn_guardar = new System.Windows.Forms.Button();
+            this.Txt_codigoEmpleado = new System.Windows.Forms.TextBox();
+            this.Lbl_codigoEmpleado = new System.Windows.Forms.Label();
             this.Pnl_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Gpb_estado.SuspendLayout();
@@ -104,7 +106,7 @@
             // txt_telefonoEmpleado
             // 
             this.txt_telefonoEmpleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_telefonoEmpleado.Location = new System.Drawing.Point(432, 347);
+            this.txt_telefonoEmpleado.Location = new System.Drawing.Point(423, 358);
             this.txt_telefonoEmpleado.Name = "txt_telefonoEmpleado";
             this.txt_telefonoEmpleado.Size = new System.Drawing.Size(230, 23);
             this.txt_telefonoEmpleado.TabIndex = 181;
@@ -113,7 +115,7 @@
             // 
             this.Lbl_telefonoEmpleado.AutoSize = true;
             this.Lbl_telefonoEmpleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_telefonoEmpleado.Location = new System.Drawing.Point(250, 350);
+            this.Lbl_telefonoEmpleado.Location = new System.Drawing.Point(241, 361);
             this.Lbl_telefonoEmpleado.Name = "Lbl_telefonoEmpleado";
             this.Lbl_telefonoEmpleado.Size = new System.Drawing.Size(133, 17);
             this.Lbl_telefonoEmpleado.TabIndex = 180;
@@ -122,7 +124,7 @@
             // Txt_dpiEmpleado
             // 
             this.Txt_dpiEmpleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_dpiEmpleado.Location = new System.Drawing.Point(432, 311);
+            this.Txt_dpiEmpleado.Location = new System.Drawing.Point(423, 322);
             this.Txt_dpiEmpleado.Name = "Txt_dpiEmpleado";
             this.Txt_dpiEmpleado.Size = new System.Drawing.Size(230, 23);
             this.Txt_dpiEmpleado.TabIndex = 179;
@@ -131,7 +133,7 @@
             // 
             this.Lbl_dpiEmpleado.AutoSize = true;
             this.Lbl_dpiEmpleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_dpiEmpleado.Location = new System.Drawing.Point(250, 314);
+            this.Lbl_dpiEmpleado.Location = new System.Drawing.Point(241, 325);
             this.Lbl_dpiEmpleado.Name = "Lbl_dpiEmpleado";
             this.Lbl_dpiEmpleado.Size = new System.Drawing.Size(100, 17);
             this.Lbl_dpiEmpleado.TabIndex = 178;
@@ -140,7 +142,7 @@
             // Txt_direccionEmpleado
             // 
             this.Txt_direccionEmpleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_direccionEmpleado.Location = new System.Drawing.Point(432, 272);
+            this.Txt_direccionEmpleado.Location = new System.Drawing.Point(423, 283);
             this.Txt_direccionEmpleado.Name = "Txt_direccionEmpleado";
             this.Txt_direccionEmpleado.Size = new System.Drawing.Size(230, 23);
             this.Txt_direccionEmpleado.TabIndex = 177;
@@ -149,7 +151,7 @@
             // 
             this.Lbl_direccionEmpleado.AutoSize = true;
             this.Lbl_direccionEmpleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_direccionEmpleado.Location = new System.Drawing.Point(250, 275);
+            this.Lbl_direccionEmpleado.Location = new System.Drawing.Point(241, 286);
             this.Lbl_direccionEmpleado.Name = "Lbl_direccionEmpleado";
             this.Lbl_direccionEmpleado.Size = new System.Drawing.Size(140, 17);
             this.Lbl_direccionEmpleado.TabIndex = 176;
@@ -158,7 +160,7 @@
             // Txt_apellidoEmpleado
             // 
             this.Txt_apellidoEmpleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_apellidoEmpleado.Location = new System.Drawing.Point(432, 231);
+            this.Txt_apellidoEmpleado.Location = new System.Drawing.Point(423, 242);
             this.Txt_apellidoEmpleado.Name = "Txt_apellidoEmpleado";
             this.Txt_apellidoEmpleado.Size = new System.Drawing.Size(230, 23);
             this.Txt_apellidoEmpleado.TabIndex = 173;
@@ -166,7 +168,7 @@
             // Txt_nombreEmpleado
             // 
             this.Txt_nombreEmpleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_nombreEmpleado.Location = new System.Drawing.Point(432, 193);
+            this.Txt_nombreEmpleado.Location = new System.Drawing.Point(423, 204);
             this.Txt_nombreEmpleado.Name = "Txt_nombreEmpleado";
             this.Txt_nombreEmpleado.Size = new System.Drawing.Size(230, 23);
             this.Txt_nombreEmpleado.TabIndex = 172;
@@ -175,7 +177,7 @@
             // 
             this.Lbl_apellidoEmpleado.AutoSize = true;
             this.Lbl_apellidoEmpleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_apellidoEmpleado.Location = new System.Drawing.Point(249, 234);
+            this.Lbl_apellidoEmpleado.Location = new System.Drawing.Point(240, 245);
             this.Lbl_apellidoEmpleado.Name = "Lbl_apellidoEmpleado";
             this.Lbl_apellidoEmpleado.Size = new System.Drawing.Size(132, 17);
             this.Lbl_apellidoEmpleado.TabIndex = 171;
@@ -185,7 +187,7 @@
             // 
             this.Lbl_nombreEmpleado.AutoSize = true;
             this.Lbl_nombreEmpleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_nombreEmpleado.Location = new System.Drawing.Point(249, 193);
+            this.Lbl_nombreEmpleado.Location = new System.Drawing.Point(240, 204);
             this.Lbl_nombreEmpleado.Name = "Lbl_nombreEmpleado";
             this.Lbl_nombreEmpleado.Size = new System.Drawing.Size(132, 17);
             this.Lbl_nombreEmpleado.TabIndex = 170;
@@ -321,11 +323,31 @@
             this.Btn_guardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_guardar.UseVisualStyleBackColor = false;
             // 
+            // Txt_codigoEmpleado
+            // 
+            this.Txt_codigoEmpleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_codigoEmpleado.Location = new System.Drawing.Point(423, 164);
+            this.Txt_codigoEmpleado.Name = "Txt_codigoEmpleado";
+            this.Txt_codigoEmpleado.Size = new System.Drawing.Size(230, 23);
+            this.Txt_codigoEmpleado.TabIndex = 183;
+            // 
+            // Lbl_codigoEmpleado
+            // 
+            this.Lbl_codigoEmpleado.AutoSize = true;
+            this.Lbl_codigoEmpleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_codigoEmpleado.Location = new System.Drawing.Point(241, 167);
+            this.Lbl_codigoEmpleado.Name = "Lbl_codigoEmpleado";
+            this.Lbl_codigoEmpleado.Size = new System.Drawing.Size(129, 17);
+            this.Lbl_codigoEmpleado.TabIndex = 182;
+            this.Lbl_codigoEmpleado.Text = "Codigo Empleado";
+            // 
             // frm_adminEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(910, 580);
+            this.Controls.Add(this.Txt_codigoEmpleado);
+            this.Controls.Add(this.Lbl_codigoEmpleado);
             this.Controls.Add(this.txt_telefonoEmpleado);
             this.Controls.Add(this.Lbl_telefonoEmpleado);
             this.Controls.Add(this.Txt_dpiEmpleado);
@@ -382,5 +404,7 @@
         public System.Windows.Forms.Button Btn_modificar;
         public System.Windows.Forms.Button Btn_eliminar;
         public System.Windows.Forms.Button Btn_guardar;
+        public System.Windows.Forms.TextBox Txt_codigoEmpleado;
+        private System.Windows.Forms.Label Lbl_codigoEmpleado;
     }
 }

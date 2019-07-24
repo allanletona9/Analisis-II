@@ -44,6 +44,8 @@
             this.Btn_cerrar = new System.Windows.Forms.Button();
             this.Lbl_administracionArbitros = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Txt_codigoCampo = new System.Windows.Forms.TextBox();
+            this.Lbl_codigoCampo = new System.Windows.Forms.Label();
             this.Gpb_estado.SuspendLayout();
             this.Pnl_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -52,7 +54,7 @@
             // Txt_numeroCampo
             // 
             this.Txt_numeroCampo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_numeroCampo.Location = new System.Drawing.Point(414, 302);
+            this.Txt_numeroCampo.Location = new System.Drawing.Point(413, 323);
             this.Txt_numeroCampo.Name = "Txt_numeroCampo";
             this.Txt_numeroCampo.Size = new System.Drawing.Size(230, 23);
             this.Txt_numeroCampo.TabIndex = 154;
@@ -60,7 +62,7 @@
             // Txt_nombreCampo
             // 
             this.Txt_nombreCampo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_nombreCampo.Location = new System.Drawing.Point(414, 248);
+            this.Txt_nombreCampo.Location = new System.Drawing.Point(413, 269);
             this.Txt_nombreCampo.Name = "Txt_nombreCampo";
             this.Txt_nombreCampo.Size = new System.Drawing.Size(230, 23);
             this.Txt_nombreCampo.TabIndex = 153;
@@ -69,7 +71,7 @@
             // 
             this.Lbl_numeroCampo.AutoSize = true;
             this.Lbl_numeroCampo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_numeroCampo.Location = new System.Drawing.Point(287, 305);
+            this.Lbl_numeroCampo.Location = new System.Drawing.Point(286, 326);
             this.Lbl_numeroCampo.Name = "Lbl_numeroCampo";
             this.Lbl_numeroCampo.Size = new System.Drawing.Size(115, 17);
             this.Lbl_numeroCampo.TabIndex = 152;
@@ -79,7 +81,7 @@
             // 
             this.Lbl_nombreCampo.AutoSize = true;
             this.Lbl_nombreCampo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_nombreCampo.Location = new System.Drawing.Point(287, 251);
+            this.Lbl_nombreCampo.Location = new System.Drawing.Point(286, 272);
             this.Lbl_nombreCampo.Name = "Lbl_nombreCampo";
             this.Lbl_nombreCampo.Size = new System.Drawing.Size(116, 17);
             this.Lbl_nombreCampo.TabIndex = 151;
@@ -261,11 +263,31 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // Txt_codigoCampo
+            // 
+            this.Txt_codigoCampo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_codigoCampo.Location = new System.Drawing.Point(413, 224);
+            this.Txt_codigoCampo.Name = "Txt_codigoCampo";
+            this.Txt_codigoCampo.Size = new System.Drawing.Size(230, 23);
+            this.Txt_codigoCampo.TabIndex = 158;
+            // 
+            // Lbl_codigoCampo
+            // 
+            this.Lbl_codigoCampo.AutoSize = true;
+            this.Lbl_codigoCampo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_codigoCampo.Location = new System.Drawing.Point(286, 227);
+            this.Lbl_codigoCampo.Name = "Lbl_codigoCampo";
+            this.Lbl_codigoCampo.Size = new System.Drawing.Size(113, 17);
+            this.Lbl_codigoCampo.TabIndex = 157;
+            this.Lbl_codigoCampo.Text = "Codigo Campo";
+            // 
             // frm_adminCampos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(910, 580);
+            this.Controls.Add(this.Txt_codigoCampo);
+            this.Controls.Add(this.Lbl_codigoCampo);
             this.Controls.Add(this.Pnl_titulo);
             this.Controls.Add(this.Txt_numeroCampo);
             this.Controls.Add(this.Txt_nombreCampo);
@@ -310,5 +332,7 @@
         private System.Windows.Forms.Button Btn_cerrar;
         private System.Windows.Forms.Label Lbl_administracionArbitros;
         private System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.TextBox Txt_codigoCampo;
+        private System.Windows.Forms.Label Lbl_codigoCampo;
     }
 }
