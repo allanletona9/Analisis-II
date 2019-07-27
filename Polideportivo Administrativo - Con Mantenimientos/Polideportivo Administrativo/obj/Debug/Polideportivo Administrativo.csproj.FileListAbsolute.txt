@@ -1,0 +1,68 @@
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\bin\Debug\Polideportivo Administrativo.exe.config
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\bin\Debug\Polideportivo Administrativo.exe
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\bin\Debug\Polideportivo Administrativo.pdb
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo Administrativo.csprojAssemblyReference.cache
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Properties.Resources.resources
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo Administrativo.csproj.GenerateResource.cache
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo Administrativo.csproj.CoreCompileInputs.cache
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo Administrativo.exe
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo Administrativo.pdb
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.MDIPolideportivo_admin.resources
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.frm_login.resources
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_jugadores.resources
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_arbitros.resources
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_campeonatos.resources
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_campos.resources
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_deportes.resources
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_empleados.resources
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_entrenadores.resources
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_equipos.resources
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_sanciones.resources
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Procesos.frm_asignacionEquiposCampeonato.resources
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Procesos.frm_ConsultarCalendario.resources
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Procesos.frm_controlResultados.resources
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Procesos.frm_controlSanciones.resources
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Procesos.frm_nuevoCalendario.resources
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_adminArbitros.resources
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_adminCampos.resources
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_adminDeportescs.resources
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_adminEmpleados.resources
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_adminEntrenadores.resources
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_adminEquipos.resources
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_adminJugadores.resources
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_adminSanciones.resources
+C:\Users\allan\Desktop\Octavo Semestre\Analisis De Sistemas II\Primer Proyecto\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_adminCampeonatos.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\bin\Debug\Polideportivo Administrativo.exe.config
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\bin\Debug\Polideportivo Administrativo.exe
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\bin\Debug\Polideportivo Administrativo.pdb
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo Administrativo.csprojAssemblyReference.cache
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.frm_login.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_adminCampeonatos.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_adminArbitros.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_adminCampos.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_adminDeportescs.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_adminEmpleados.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_adminEntrenadores.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_adminEquipos.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_adminJugadores.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_adminSanciones.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_arbitros.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_campeonatos.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_campos.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_deportes.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_empleados.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_entrenadores.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_equipos.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_jugadores.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Mantenimientos.frm_sanciones.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.MDIPolideportivo_admin.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Procesos.frm_asignacionEquiposCampeonato.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Procesos.frm_ConsultarCalendario.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Procesos.frm_controlResultados.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Procesos.frm_controlSanciones.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Procesos.frm_nuevoCalendario.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo_Administrativo.Properties.Resources.resources
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo Administrativo.csproj.GenerateResource.cache
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo Administrativo.csproj.CoreCompileInputs.cache
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo Administrativo.exe
+C:\Users\BM\Desktop\EMPLEADOS, DEPORTES Y CAMPOS\Polideportivo Administrativo\Polideportivo Administrativo\obj\Debug\Polideportivo Administrativo.pdb

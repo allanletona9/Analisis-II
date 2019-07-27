@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F57F6FA6-3BFF-4D85-BEC8-C784446B2709}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Polideportivo_Administrativo</RootNamespace>
+    <AssemblyName>Polideportivo Administrativo</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="conexion.cs" />
+    <Compile Include="frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_adminCampeonatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_adminCampeonatos.Designer.cs">
+      <DependentUpon>frm_adminCampeonatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_adminArbitros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_adminArbitros.Designer.cs">
+      <DependentUpon>frm_adminArbitros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_adminCampos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_adminCampos.Designer.cs">
+      <DependentUpon>frm_adminCampos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_adminDeportescs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_adminDeportescs.Designer.cs">
+      <DependentUpon>frm_adminDeportescs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_adminEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_adminEmpleados.Designer.cs">
+      <DependentUpon>frm_adminEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_adminEntrenadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_adminEntrenadores.Designer.cs">
+      <DependentUpon>frm_adminEntrenadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_adminEquipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_adminEquipos.Designer.cs">
+      <DependentUpon>frm_adminEquipos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_adminJugadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_adminJugadores.Designer.cs">
+      <DependentUpon>frm_adminJugadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_adminSanciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_adminSanciones.Designer.cs">
+      <DependentUpon>frm_adminSanciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_arbitros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_arbitros.Designer.cs">
+      <DependentUpon>frm_arbitros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_campeonatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_campeonatos.Designer.cs">
+      <DependentUpon>frm_campeonatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_campos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_campos.Designer.cs">
+      <DependentUpon>frm_campos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_deportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_deportes.Designer.cs">
+      <DependentUpon>frm_deportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_empleados.Designer.cs">
+      <DependentUpon>frm_empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_entrenadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_entrenadores.Designer.cs">
+      <DependentUpon>frm_entrenadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_equipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_equipos.Designer.cs">
+      <DependentUpon>frm_equipos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_jugadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_jugadores.Designer.cs">
+      <DependentUpon>frm_jugadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_sanciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_sanciones.Designer.cs">
+      <DependentUpon>frm_sanciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIPolideportivo_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIPolideportivo_admin.Designer.cs">
+      <DependentUpon>MDIPolideportivo_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\frm_asignacionEquiposCampeonato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\frm_asignacionEquiposCampeonato.Designer.cs">
+      <DependentUpon>frm_asignacionEquiposCampeonato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\frm_ConsultarCalendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\frm_ConsultarCalendario.Designer.cs">
+      <DependentUpon>frm_ConsultarCalendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\frm_controlResultados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\frm_controlResultados.Designer.cs">
+      <DependentUpon>frm_controlResultados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\frm_controlSanciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\frm_controlSanciones.Designer.cs">
+      <DependentUpon>frm_controlSanciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\frm_nuevoCalendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\frm_nuevoCalendario.Designer.cs">
+      <DependentUpon>frm_nuevoCalendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frm_adminCampeonatos.resx">
+      <DependentUpon>frm_adminCampeonatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frm_adminArbitros.resx">
+      <DependentUpon>frm_adminArbitros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frm_adminCampos.resx">
+      <DependentUpon>frm_adminCampos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frm_adminDeportescs.resx">
+      <DependentUpon>frm_adminDeportescs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frm_adminEmpleados.resx">
+      <DependentUpon>frm_adminEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frm_adminEntrenadores.resx">
+      <DependentUpon>frm_adminEntrenadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frm_adminEquipos.resx">
+      <DependentUpon>frm_adminEquipos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frm_adminJugadores.resx">
+      <DependentUpon>frm_adminJugadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frm_adminSanciones.resx">
+      <DependentUpon>frm_adminSanciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frm_arbitros.resx">
+      <DependentUpon>frm_arbitros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frm_campeonatos.resx">
+      <DependentUpon>frm_campeonatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frm_campos.resx">
+      <DependentUpon>frm_campos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frm_deportes.resx">
+      <DependentUpon>frm_deportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frm_empleados.resx">
+      <DependentUpon>frm_empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frm_entrenadores.resx">
+      <DependentUpon>frm_entrenadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frm_equipos.resx">
+      <DependentUpon>frm_equipos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frm_jugadores.resx">
+      <DependentUpon>frm_jugadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frm_sanciones.resx">
+      <DependentUpon>frm_sanciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIPolideportivo_admin.resx">
+      <DependentUpon>MDIPolideportivo_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\frm_asignacionEquiposCampeonato.resx">
+      <DependentUpon>frm_asignacionEquiposCampeonato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\frm_ConsultarCalendario.resx">
+      <DependentUpon>frm_ConsultarCalendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\frm_controlResultados.resx">
+      <DependentUpon>frm_controlResultados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\frm_controlSanciones.resx">
+      <DependentUpon>frm_controlSanciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\frm_nuevoCalendario.resx">
+      <DependentUpon>frm_nuevoCalendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cerrar-ventana-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-modo-deportes-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-nombre-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-añadir-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-guardar-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-historial-de-pedidos-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eliminar-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cerrar-ventana-481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-retroceder-50.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
