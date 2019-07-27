@@ -1,0 +1,63 @@
+D:\Octavo semestre\Analisis de sistemas II\Polideportivo\Polideportivo\Polideportivo\bin\Debug\Polideportivo.exe.config
+D:\Octavo semestre\Analisis de sistemas II\Polideportivo\Polideportivo\Polideportivo\bin\Debug\Polideportivo.exe
+D:\Octavo semestre\Analisis de sistemas II\Polideportivo\Polideportivo\Polideportivo\bin\Debug\Polideportivo.pdb
+D:\Octavo semestre\Analisis de sistemas II\Polideportivo\Polideportivo\Polideportivo\obj\Debug\Polideportivo.csprojAssemblyReference.cache
+D:\Octavo semestre\Analisis de sistemas II\Polideportivo\Polideportivo\Polideportivo\obj\Debug\Polideportivo.Properties.Resources.resources
+D:\Octavo semestre\Analisis de sistemas II\Polideportivo\Polideportivo\Polideportivo\obj\Debug\Polideportivo.csproj.GenerateResource.cache
+D:\Octavo semestre\Analisis de sistemas II\Polideportivo\Polideportivo\Polideportivo\obj\Debug\Polideportivo.csproj.CoreCompileInputs.cache
+D:\Octavo semestre\Analisis de sistemas II\Polideportivo\Polideportivo\Polideportivo\obj\Debug\Polideportivo.exe
+D:\Octavo semestre\Analisis de sistemas II\Polideportivo\Polideportivo\Polideportivo\obj\Debug\Polideportivo.pdb
+D:\Octavo semestre\Analisis de sistemas II\Polideportivo\Polideportivo\Polideportivo\obj\Debug\Polideportivo.Login.resources
+D:\Octavo semestre\Analisis de sistemas II\Polideportivo\Polideportivo\Polideportivo\obj\Debug\Polideportivo.Menu.resources
+D:\Octavo semestre\Analisis de sistemas II\Polideportivo\Polideportivo\Polideportivo\obj\Debug\Polideportivo.MisJugadores.resources
+D:\Octavo semestre\Analisis de sistemas II\Polideportivo\Polideportivo\Polideportivo\obj\Debug\Polideportivo.TablaPosiciones.resources
+D:\Octavo semestre\Analisis de sistemas II\Polideportivo\Polideportivo\Polideportivo\obj\Debug\Polideportivo.Calendario.resources
+D:\Octavo semestre\Analisis de sistemas II\Polideportivo\Polideportivo\Polideportivo\obj\Debug\Polideportivo.CambiarClave.resources
+D:\Octavo semestre\Analisis de sistemas II\Polideportivo\Polideportivo\Polideportivo\obj\Debug\Polideportivo.Partidos.resources
+D:\Octavo semestre\Analisis de sistemas II\Polideportivo\Polideportivo\Polideportivo\obj\Debug\Polideportivo.Sanciones.resources
+D:\Octavo semestre\Analisis de sistemas II\Polideportivo\Polideportivo\Polideportivo\obj\Debug\Polideportivo.DiccionarioConceptos.resources
+D:\Octavo semestre\Analisis de sistemas II\Polideportivo\Polideportivo\Polideportivo\obj\Debug\Polideportivo.PreguntasFrecuentas.resources
+D:\Octavo semestre\Analisis de sistemas II\Polideportivo\Polideportivo\Polideportivo\obj\Debug\Polideportivo.MejoresJugadores.resources
+D:\Octavo semestre\Analisis de sistemas II\Polideportivo\Polideportivo\Polideportivo\obj\Debug\Polideportivo.SeleccionarEquipo.resources
+D:\Octavo semestre\Analisis de sistemas II\Prototipo Polideportivo (Usuarios)\Polideportivo\Polideportivo\bin\Debug\Polideportivo.exe.config
+D:\Octavo semestre\Analisis de sistemas II\Prototipo Polideportivo (Usuarios)\Polideportivo\Polideportivo\bin\Debug\Polideportivo.exe
+D:\Octavo semestre\Analisis de sistemas II\Prototipo Polideportivo (Usuarios)\Polideportivo\Polideportivo\bin\Debug\Polideportivo.pdb
+D:\Octavo semestre\Analisis de sistemas II\Prototipo Polideportivo (Usuarios)\Polideportivo\Polideportivo\obj\Debug\Polideportivo.csprojAssemblyReference.cache
+D:\Octavo semestre\Analisis de sistemas II\Prototipo Polideportivo (Usuarios)\Polideportivo\Polideportivo\obj\Debug\Polideportivo.Calendario.resources
+D:\Octavo semestre\Analisis de sistemas II\Prototipo Polideportivo (Usuarios)\Polideportivo\Polideportivo\obj\Debug\Polideportivo.CambiarClave.resources
+D:\Octavo semestre\Analisis de sistemas II\Prototipo Polideportivo (Usuarios)\Polideportivo\Polideportivo\obj\Debug\Polideportivo.DiccionarioConceptos.resources
+D:\Octavo semestre\Analisis de sistemas II\Prototipo Polideportivo (Usuarios)\Polideportivo\Polideportivo\obj\Debug\Polideportivo.Login.resources
+D:\Octavo semestre\Analisis de sistemas II\Prototipo Polideportivo (Usuarios)\Polideportivo\Polideportivo\obj\Debug\Polideportivo.MejoresJugadores.resources
+D:\Octavo semestre\Analisis de sistemas II\Prototipo Polideportivo (Usuarios)\Polideportivo\Polideportivo\obj\Debug\Polideportivo.Menu.resources
+D:\Octavo semestre\Analisis de sistemas II\Prototipo Polideportivo (Usuarios)\Polideportivo\Polideportivo\obj\Debug\Polideportivo.MisJugadores.resources
+D:\Octavo semestre\Analisis de sistemas II\Prototipo Polideportivo (Usuarios)\Polideportivo\Polideportivo\obj\Debug\Polideportivo.Partidos.resources
+D:\Octavo semestre\Analisis de sistemas II\Prototipo Polideportivo (Usuarios)\Polideportivo\Polideportivo\obj\Debug\Polideportivo.PreguntasFrecuentas.resources
+D:\Octavo semestre\Analisis de sistemas II\Prototipo Polideportivo (Usuarios)\Polideportivo\Polideportivo\obj\Debug\Polideportivo.Properties.Resources.resources
+D:\Octavo semestre\Analisis de sistemas II\Prototipo Polideportivo (Usuarios)\Polideportivo\Polideportivo\obj\Debug\Polideportivo.Sanciones.resources
+D:\Octavo semestre\Analisis de sistemas II\Prototipo Polideportivo (Usuarios)\Polideportivo\Polideportivo\obj\Debug\Polideportivo.SeleccionarEquipo.resources
+D:\Octavo semestre\Analisis de sistemas II\Prototipo Polideportivo (Usuarios)\Polideportivo\Polideportivo\obj\Debug\Polideportivo.TablaPosiciones.resources
+D:\Octavo semestre\Analisis de sistemas II\Prototipo Polideportivo (Usuarios)\Polideportivo\Polideportivo\obj\Debug\Polideportivo.csproj.GenerateResource.cache
+D:\Octavo semestre\Analisis de sistemas II\Prototipo Polideportivo (Usuarios)\Polideportivo\Polideportivo\obj\Debug\Polideportivo.csproj.CoreCompileInputs.cache
+D:\Octavo semestre\Analisis de sistemas II\Prototipo Polideportivo (Usuarios)\Polideportivo\Polideportivo\obj\Debug\Polideportivo.exe
+D:\Octavo semestre\Analisis de sistemas II\Prototipo Polideportivo (Usuarios)\Polideportivo\Polideportivo\obj\Debug\Polideportivo.pdb
+C:\Users\WIN10\Desktop\Polideportivo\Polideportivo\bin\Debug\Polideportivo.exe.config
+C:\Users\WIN10\Desktop\Polideportivo\Polideportivo\bin\Debug\Polideportivo.exe
+C:\Users\WIN10\Desktop\Polideportivo\Polideportivo\bin\Debug\Polideportivo.pdb
+C:\Users\WIN10\Desktop\Polideportivo\Polideportivo\obj\Debug\Polideportivo.csprojAssemblyReference.cache
+C:\Users\WIN10\Desktop\Polideportivo\Polideportivo\obj\Debug\Polideportivo.Calendario.resources
+C:\Users\WIN10\Desktop\Polideportivo\Polideportivo\obj\Debug\Polideportivo.CambiarClave.resources
+C:\Users\WIN10\Desktop\Polideportivo\Polideportivo\obj\Debug\Polideportivo.DiccionarioConceptos.resources
+C:\Users\WIN10\Desktop\Polideportivo\Polideportivo\obj\Debug\Polideportivo.Login.resources
+C:\Users\WIN10\Desktop\Polideportivo\Polideportivo\obj\Debug\Polideportivo.MejoresJugadores.resources
+C:\Users\WIN10\Desktop\Polideportivo\Polideportivo\obj\Debug\Polideportivo.Menu.resources
+C:\Users\WIN10\Desktop\Polideportivo\Polideportivo\obj\Debug\Polideportivo.MisJugadores.resources
+C:\Users\WIN10\Desktop\Polideportivo\Polideportivo\obj\Debug\Polideportivo.Partidos.resources
+C:\Users\WIN10\Desktop\Polideportivo\Polideportivo\obj\Debug\Polideportivo.PreguntasFrecuentas.resources
+C:\Users\WIN10\Desktop\Polideportivo\Polideportivo\obj\Debug\Polideportivo.Properties.Resources.resources
+C:\Users\WIN10\Desktop\Polideportivo\Polideportivo\obj\Debug\Polideportivo.Sanciones.resources
+C:\Users\WIN10\Desktop\Polideportivo\Polideportivo\obj\Debug\Polideportivo.SeleccionarEquipo.resources
+C:\Users\WIN10\Desktop\Polideportivo\Polideportivo\obj\Debug\Polideportivo.TablaPosiciones.resources
+C:\Users\WIN10\Desktop\Polideportivo\Polideportivo\obj\Debug\Polideportivo.csproj.GenerateResource.cache
+C:\Users\WIN10\Desktop\Polideportivo\Polideportivo\obj\Debug\Polideportivo.csproj.CoreCompileInputs.cache
+C:\Users\WIN10\Desktop\Polideportivo\Polideportivo\obj\Debug\Polideportivo.exe
+C:\Users\WIN10\Desktop\Polideportivo\Polideportivo\obj\Debug\Polideportivo.pdb
