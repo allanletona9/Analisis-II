@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Polideportivo_Administrativo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Odbc;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,18 +16,21 @@ namespace Polideportivo
 {
     public partial class SeleccionarEquipo : Form
     {
-        String sIdEquipo, sOrigen;
+        String sIdEquipo, sOrigen, sIdEntrenador;
+        List<int> lIdEquipo = new List<int>();
 
-        public SeleccionarEquipo(String origen, String equipo)
+        public SeleccionarEquipo(String origen, String sIdEntrenador, String sIdEquipo)
         {
             InitializeComponent();
+            this.sIdEntrenador = sIdEntrenador;
             this.sIdEquipo = sIdEquipo;
             this.sOrigen = origen;
+            llenarComboBox();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Menu menu = new Menu(Cbo_seleccionar_equipo.Text);
+            Menu menu = new Menu(sIdEntrenador, lIdEquipo[Cbo_seleccionar_equipo.SelectedIndex].ToString());
             menu.Show();
             Hide();
         }
@@ -35,12 +40,17 @@ namespace Polideportivo
 
         }
 
+        private void Cbo_seleccionar_equipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void Btn_regresar_Click(object sender, EventArgs e)
         {
 
             if(sOrigen == "Menu")
             {
-                Menu menu = new Menu(sIdEquipo);
+                Menu menu = new Menu(sIdEntrenador, sIdEquipo);
                 menu.Show();
                 Hide();
             }
@@ -51,6 +61,18 @@ namespace Polideportivo
                 Hide();
             }
 
+        }
+
+        private void llenarComboBox()
+        {
+            OdbcCommand sql = new OdbcCommand("Select PK_idEquipo, (SELECT tbl_equipos.nombre_equipo FROM tbl_equipos WHERE tbl_equipos.PK_idEquipo = tbl_equipos_entrenadores.PK_idEquipo) from tbl_equipos_entrenadores WHERE PK_idEntrenador='"  + sIdEntrenador +   "'", conexion.conectar());
+            OdbcDataReader almacena = sql.ExecuteReader();
+            while (almacena.Read() == true)
+            {
+                Cbo_seleccionar_equipo.Items.Add(almacena.GetString(1));
+                lIdEquipo.Add(almacena.GetInt32(0));
+            }
+            almacena.Close();
         }
     }
 }

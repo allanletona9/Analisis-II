@@ -1,5 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
+using System.Data.Odbc;
+using System.Data.SqlClient;
+using System.Net;
+using System.Net.NetworkInformation;
+using Polideportivo_Administrativo;
 
 //Autor: Eduardo Colon
 
@@ -7,16 +20,40 @@ namespace Polideportivo
 {
     public partial class Menu : Form
     {
-        String sIdEquipo = null;
+        String sIdEquipo = null, sIdEntrenador = null;
+        //Autor Diego Gomez
+        conexion nueva = new conexion();
 
-        public Menu(String sIdEquipo)
+        public Menu(String sIdEntrenador, String sIdEquipo)
         {
+
             InitializeComponent();
+            this.sIdEntrenador = sIdEntrenador;
             this.sIdEquipo = sIdEquipo;
         }
 
         private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Autor: Diego Gomez
+            conexion nueva = new conexion();
+            OdbcCommand cmd;
+            cmd = new OdbcCommand("INSERT INTO tbl_bitacora (PK_idBitacora," +
+                  "PK_idUsuario, " +
+                  "accion, " +
+                  "fecha, " +
+                  "hora, " +
+                  "tabla," +
+                  "host) " +
+                  "VALUES('' ,'1'" +
+                  ",'Salida Del Sistema de Usuarios' " +
+                   ",'" + DateTime.Now.ToString("yyy/MM/dd") + "'" +
+                   ",'" + DateTime.Now.ToString("hh:mm:ss") + "'" +
+                   ",' '" +
+                   ",' '" +
+                   ")"
+                  , conexion.conectar());
+            cmd.ExecuteNonQuery();
+
             Application.Exit();
         }
 
@@ -85,7 +122,7 @@ namespace Polideportivo
 
         private void seleccionarEquipoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SeleccionarEquipo seleccionarEquipo = new SeleccionarEquipo("Menu", sIdEquipo);
+            SeleccionarEquipo seleccionarEquipo = new SeleccionarEquipo("Menu",sIdEntrenador , sIdEquipo);
             seleccionarEquipo.Show();
             Hide();
         }
