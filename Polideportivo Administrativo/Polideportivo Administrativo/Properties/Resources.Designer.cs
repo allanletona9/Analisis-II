@@ -143,6 +143,16 @@ namespace Polideportivo_Administrativo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_retroceder_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-retroceder-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login__2_ {
             get {
                 object obj = ResourceManager.GetObject("login (2)", resourceCulture);

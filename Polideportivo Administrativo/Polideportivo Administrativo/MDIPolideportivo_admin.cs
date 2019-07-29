@@ -9,17 +9,26 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Polideportivo_Administrativo.Mantenimientos;
 using Polideportivo_Administrativo.Procesos;
+using Polideportivo_Administrativo.Seguridad;
+using System.Runtime.InteropServices;
+using System.Data.Odbc;
 
 namespace Polideportivo_Administrativo
 {
     public partial class MDIPolideportivo_admin : Form
     {
-        private int childFormNumber = 0;
 
-        public MDIPolideportivo_admin()
+        private int childFormNumber = 0;
+        conexion nueva = new conexion();
+
+        String nombreUsuario, tipo;
+        public MDIPolideportivo_admin(String nombreUsuario, String tipo)
         {
-            //Autor: Allan Letona
+            this.nombreUsuario = nombreUsuario;
+            this.tipo = tipo;
             InitializeComponent();
+            lblUsuario.Text = "Usuario: " + nombreUsuario;
+
         }
 
         private void ShowNewForm(object sender, EventArgs e)
@@ -120,6 +129,27 @@ namespace Polideportivo_Administrativo
 
         private void cerrarSesionToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            
+
+        //Autor: Diego Gomez
+        conexion nueva = new conexion();
+            OdbcCommand cmd;
+            cmd = new OdbcCommand("INSERT INTO tbl_bitacora (PK_idBitacora," +
+                  "PK_idUsuario, " +
+                  "accion, " +
+                  "fecha, " +
+                  "hora, " +
+                  "tabla," +
+                  "host) " +
+                  "VALUES('' ,'1'" +
+                  ",'Salida Del Sistema Administrativo' " +
+                   ",'" + DateTime.Now.ToString("yyy/MM/dd") + "'" +
+                   ",'" + DateTime.Now.ToString("hh:mm:ss") + "'" +
+                   ",' '" +
+                   ",' '" +
+                   ")"
+                  , conexion.conectar());
+            cmd.ExecuteNonQuery();
             this.Close();
             frm_login f = new frm_login();
             f.Show();
@@ -443,6 +473,33 @@ namespace Polideportivo_Administrativo
             }
         }
 
+//Autor Diego Gomez
+        bool ventanaUsuarios = false;
+        frm_usuarios mostrarUsuarios= new frm_usuarios();
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is frm_usuarios);
+            if (ventanaUsuarios == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    mostrarUsuarios = new frm_usuarios();
+                }
+
+                mostrarUsuarios.MdiParent = this;
+                mostrarUsuarios.StartPosition = FormStartPosition.CenterScreen;
+                mostrarUsuarios.Show();
+                Application.DoEvents();
+                ventanaUsuarios = true;
+            }
+            else
+            {
+                mostrarUsuarios.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
         bool ventanaControlSanciones = false;
         frm_controlSanciones mostrarControlSanciones = new frm_controlSanciones();
 
@@ -465,6 +522,88 @@ namespace Polideportivo_Administrativo
             {
                 mostrarControlSanciones.WindowState = System.Windows.Forms.FormWindowState.Normal;
             }
+        }
+
+        //Autor Diego Gomez
+        bool ventanabitacora = false;
+        frm_bitacora mostrarbitacora = new frm_bitacora();
+        private void bitacoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is frm_bitacora);
+            if (ventanabitacora == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    mostrarbitacora = new frm_bitacora();
+                }
+
+                mostrarbitacora.MdiParent = this;
+                mostrarbitacora.StartPosition = FormStartPosition.CenterScreen;
+                mostrarbitacora.Show();
+                Application.DoEvents();
+                ventanabitacora = true;
+            }
+            else
+            {
+                mostrarbitacora.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        //Autor Diego Gomez
+        bool ventanacambio = false;
+        frm_cambio_contraseña mostrarcambio = new frm_cambio_contraseña();
+
+        private void cambioContrasñenaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is frm_cambio_contraseña);
+            if (ventanacambio == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    mostrarcambio = new frm_cambio_contraseña();
+                }
+
+                mostrarcambio.MdiParent = this;
+                mostrarcambio.StartPosition = FormStartPosition.CenterScreen;
+                mostrarcambio.Show();
+                Application.DoEvents();
+                ventanacambio = true;
+            }
+            else
+            {
+                mostracreacion.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        //Autor Diego Gomez
+        bool ventanacreacion = false;
+        frm_creacion_usuarios mostracreacion = new frm_creacion_usuarios();
+
+        private void creacionDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is frm_creacion_usuarios);
+            if (ventanacreacion == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    mostracreacion = new frm_creacion_usuarios();
+                }
+
+                mostracreacion.MdiParent = this;
+                mostracreacion.StartPosition = FormStartPosition.CenterScreen;
+                mostracreacion.Show();
+                Application.DoEvents();
+                ventanacreacion = true;
+            }
+            else
+            {
+                mostracreacion.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

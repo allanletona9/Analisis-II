@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Odbc;
 
 namespace Polideportivo_Administrativo.Mantenimientos
 {
@@ -14,8 +15,26 @@ namespace Polideportivo_Administrativo.Mantenimientos
     {
         public frm_campos()
         {
-            //Autor: Eduardo Colon
+            //Autor: Alejandro Barreda
             InitializeComponent();
+            llenarGridCampos();
+        }
+        void llenarGridCampos()
+        {
+            OdbcDataAdapter dat;
+            DataSet ds;
+
+            try
+            {
+                ds = new DataSet();
+                dat = new OdbcDataAdapter("SELECT PK_idCampo AS Codigo, nombre_campo AS Nombre, numero_campo AS Numero FROM tbl_campo WHERE estado_campo=1", conexion.conectar());
+                dat.Fill(ds);
+                Dgv_campos.DataSource = ds.Tables[0];
+            }
+            catch (OdbcException er)
+            {
+                MessageBox.Show(er.Message);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -33,6 +52,51 @@ namespace Polideportivo_Administrativo.Mantenimientos
         private void frm_campos_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Btn_buscar_Click(object sender, EventArgs e)
+        {
+            OdbcDataAdapter dat;
+            DataSet ds;
+
+            try
+            {
+                ds = new DataSet();
+                dat = new OdbcDataAdapter("SELECT PK_idCampo AS Codigo, nombre_campo AS Nombre, numero_campo AS Numero FROM tbl_campo WHERE PK_idCampo='" + Txt_buscar.Text + "' OR nombre_campo = '" + Txt_buscar.Text + "'", conexion.conectar());
+                dat.Fill(ds);
+                Dgv_campos.DataSource = ds.Tables[0];
+            }
+            catch (OdbcException er)
+            {
+                MessageBox.Show(er.Message);
+            }
+        }
+
+        private void Btn_seleccionar_Click(object sender, EventArgs e)
+        {
+            frm_adminCampos sudocampos = new frm_adminCampos();
+
+
+            sudocampos.Txt_codigoCampo.Text = Convert.ToString(Dgv_campos.CurrentRow.Cells[0].Value);
+            sudocampos.Txt_nombreCampo.Text = Convert.ToString(Dgv_campos.CurrentRow.Cells[1].Value);
+            sudocampos.Txt_numeroCampo.Text = Convert.ToString(Dgv_campos.CurrentRow.Cells[2].Value);
+
+            this.Close();
+            sudocampos.Txt_codigoCampo.Enabled = false;
+            sudocampos.Txt_nombreCampo.Enabled = false;
+            sudocampos.Txt_numeroCampo.Enabled = false;
+            sudocampos.Gpb_estado.Enabled = false;
+            sudocampos.Show();
+        }
+
+        private void Btn_actualizar_Click(object sender, EventArgs e)
+        {
+            llenarGridCampos();
+        }
+
+        private void Btn_salida_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

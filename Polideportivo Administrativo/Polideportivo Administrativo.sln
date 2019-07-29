@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polideportivo Administrativo", "Polideportivo Administrativo\Polideportivo Administrativo.csproj", "{F57F6FA6-3BFF-4D85-BEC8-C784446B2709}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3A0C5C62-A9C0-43A8-A205-D75371253D5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

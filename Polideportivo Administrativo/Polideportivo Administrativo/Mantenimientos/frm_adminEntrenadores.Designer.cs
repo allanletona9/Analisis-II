@@ -48,6 +48,9 @@
             this.Rdb_habilitado = new System.Windows.Forms.RadioButton();
             this.Txt_codigoEntrenador = new System.Windows.Forms.TextBox();
             this.Lbl_codigoEntrenador = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Cbo_equipo = new System.Windows.Forms.ComboBox();
+            this.Btn_Regresar = new System.Windows.Forms.Button();
             this.Pnl_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Gpb_estado.SuspendLayout();
@@ -55,7 +58,7 @@
             // 
             // Pnl_titulo
             // 
-            this.Pnl_titulo.BackColor = System.Drawing.Color.DarkRed;
+            this.Pnl_titulo.BackColor = System.Drawing.Color.DarkSlateGray;
             this.Pnl_titulo.Controls.Add(this.Btn_cerrar);
             this.Pnl_titulo.Controls.Add(this.Lbl_administracionArbitros);
             this.Pnl_titulo.Controls.Add(this.pictureBox2);
@@ -63,7 +66,7 @@
             this.Pnl_titulo.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.Pnl_titulo.Location = new System.Drawing.Point(0, 0);
             this.Pnl_titulo.Name = "Pnl_titulo";
-            this.Pnl_titulo.Size = new System.Drawing.Size(910, 49);
+            this.Pnl_titulo.Size = new System.Drawing.Size(949, 35);
             this.Pnl_titulo.TabIndex = 147;
             // 
             // Btn_cerrar
@@ -71,10 +74,10 @@
             this.Btn_cerrar.BackgroundImage = global::Polideportivo_Administrativo.Properties.Resources.icons8_cerrar_ventana_48;
             this.Btn_cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_cerrar.ForeColor = System.Drawing.Color.DarkRed;
-            this.Btn_cerrar.Location = new System.Drawing.Point(864, 3);
+            this.Btn_cerrar.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.Btn_cerrar.Location = new System.Drawing.Point(916, 3);
             this.Btn_cerrar.Name = "Btn_cerrar";
-            this.Btn_cerrar.Size = new System.Drawing.Size(46, 43);
+            this.Btn_cerrar.Size = new System.Drawing.Size(30, 29);
             this.Btn_cerrar.TabIndex = 7;
             this.Btn_cerrar.UseVisualStyleBackColor = false;
             this.Btn_cerrar.Click += new System.EventHandler(this.Btn_cerrar_Click);
@@ -84,7 +87,7 @@
             this.Lbl_administracionArbitros.AutoSize = true;
             this.Lbl_administracionArbitros.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_administracionArbitros.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.Lbl_administracionArbitros.Location = new System.Drawing.Point(45, 12);
+            this.Lbl_administracionArbitros.Location = new System.Drawing.Point(43, 8);
             this.Lbl_administracionArbitros.Name = "Lbl_administracionArbitros";
             this.Lbl_administracionArbitros.Size = new System.Drawing.Size(385, 24);
             this.Lbl_administracionArbitros.TabIndex = 2;
@@ -93,9 +96,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Polideportivo_Administrativo.Properties.Resources.icons8_modo_deportes_24;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(27, 27);
+            this.pictureBox2.Size = new System.Drawing.Size(25, 29);
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
@@ -164,7 +167,7 @@
             this.Btn_salir.ForeColor = System.Drawing.SystemColors.Desktop;
             this.Btn_salir.Image = global::Polideportivo_Administrativo.Properties.Resources.icons8_cerrar_ventana_481;
             this.Btn_salir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Btn_salir.Location = new System.Drawing.Point(583, 97);
+            this.Btn_salir.Location = new System.Drawing.Point(648, 97);
             this.Btn_salir.Name = "Btn_salir";
             this.Btn_salir.Size = new System.Drawing.Size(90, 75);
             this.Btn_salir.TabIndex = 188;
@@ -184,13 +187,14 @@
             this.Btn_ingresar.ForeColor = System.Drawing.SystemColors.Desktop;
             this.Btn_ingresar.Image = global::Polideportivo_Administrativo.Properties.Resources.icons8_añadir_48;
             this.Btn_ingresar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Btn_ingresar.Location = new System.Drawing.Point(239, 97);
+            this.Btn_ingresar.Location = new System.Drawing.Point(218, 97);
             this.Btn_ingresar.Name = "Btn_ingresar";
             this.Btn_ingresar.Size = new System.Drawing.Size(90, 75);
             this.Btn_ingresar.TabIndex = 187;
             this.Btn_ingresar.Text = "INGRESAR ";
             this.Btn_ingresar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_ingresar.UseVisualStyleBackColor = false;
+            this.Btn_ingresar.Click += new System.EventHandler(this.Btn_ingresar_Click);
             // 
             // Btn_modificar
             // 
@@ -203,13 +207,14 @@
             this.Btn_modificar.ForeColor = System.Drawing.SystemColors.Desktop;
             this.Btn_modificar.Image = global::Polideportivo_Administrativo.Properties.Resources.icons8_historial_de_pedidos_48;
             this.Btn_modificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Btn_modificar.Location = new System.Drawing.Point(411, 97);
+            this.Btn_modificar.Location = new System.Drawing.Point(390, 97);
             this.Btn_modificar.Name = "Btn_modificar";
             this.Btn_modificar.Size = new System.Drawing.Size(90, 75);
             this.Btn_modificar.TabIndex = 186;
             this.Btn_modificar.Text = "MODIFICAR ";
             this.Btn_modificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_modificar.UseVisualStyleBackColor = false;
+            this.Btn_modificar.Click += new System.EventHandler(this.Btn_modificar_Click);
             // 
             // Btn_eliminar
             // 
@@ -222,13 +227,14 @@
             this.Btn_eliminar.ForeColor = System.Drawing.SystemColors.Desktop;
             this.Btn_eliminar.Image = global::Polideportivo_Administrativo.Properties.Resources.icons8_eliminar_48;
             this.Btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Btn_eliminar.Location = new System.Drawing.Point(497, 97);
+            this.Btn_eliminar.Location = new System.Drawing.Point(476, 97);
             this.Btn_eliminar.Name = "Btn_eliminar";
             this.Btn_eliminar.Size = new System.Drawing.Size(90, 75);
             this.Btn_eliminar.TabIndex = 185;
             this.Btn_eliminar.Text = "ELIMINAR";
             this.Btn_eliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_eliminar.UseVisualStyleBackColor = false;
+            this.Btn_eliminar.Click += new System.EventHandler(this.Btn_eliminar_Click);
             // 
             // Btn_guardar
             // 
@@ -241,20 +247,21 @@
             this.Btn_guardar.ForeColor = System.Drawing.SystemColors.Desktop;
             this.Btn_guardar.Image = global::Polideportivo_Administrativo.Properties.Resources.icons8_guardar_48;
             this.Btn_guardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Btn_guardar.Location = new System.Drawing.Point(326, 97);
+            this.Btn_guardar.Location = new System.Drawing.Point(305, 97);
             this.Btn_guardar.Name = "Btn_guardar";
             this.Btn_guardar.Size = new System.Drawing.Size(90, 75);
             this.Btn_guardar.TabIndex = 184;
             this.Btn_guardar.Text = "GUARDAR";
             this.Btn_guardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_guardar.UseVisualStyleBackColor = false;
+            this.Btn_guardar.Click += new System.EventHandler(this.Btn_guardar_Click);
             // 
             // Gpb_estado
             // 
             this.Gpb_estado.Controls.Add(this.Rbd_deshabilitado);
             this.Gpb_estado.Controls.Add(this.Rdb_habilitado);
             this.Gpb_estado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gpb_estado.Location = new System.Drawing.Point(239, 392);
+            this.Gpb_estado.Location = new System.Drawing.Point(239, 428);
             this.Gpb_estado.Name = "Gpb_estado";
             this.Gpb_estado.Size = new System.Drawing.Size(434, 100);
             this.Gpb_estado.TabIndex = 189;
@@ -301,11 +308,53 @@
             this.Lbl_codigoEntrenador.TabIndex = 190;
             this.Lbl_codigoEntrenador.Text = "Codigo Entrenador";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(249, 363);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(154, 17);
+            this.label1.TabIndex = 193;
+            this.label1.Text = "Equipo Del entrenador";
+            // 
+            // Cbo_equipo
+            // 
+            this.Cbo_equipo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cbo_equipo.FormattingEnabled = true;
+            this.Cbo_equipo.Location = new System.Drawing.Point(432, 359);
+            this.Cbo_equipo.Name = "Cbo_equipo";
+            this.Cbo_equipo.Size = new System.Drawing.Size(230, 25);
+            this.Cbo_equipo.TabIndex = 192;
+            // 
+            // Btn_Regresar
+            // 
+            this.Btn_Regresar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Btn_Regresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Regresar.FlatAppearance.BorderSize = 0;
+            this.Btn_Regresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.Btn_Regresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Btn_Regresar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Regresar.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.Btn_Regresar.Image = global::Polideportivo_Administrativo.Properties.Resources.icons8_retroceder_50;
+            this.Btn_Regresar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Btn_Regresar.Location = new System.Drawing.Point(562, 97);
+            this.Btn_Regresar.Name = "Btn_Regresar";
+            this.Btn_Regresar.Size = new System.Drawing.Size(90, 75);
+            this.Btn_Regresar.TabIndex = 194;
+            this.Btn_Regresar.Text = "REGRESAR";
+            this.Btn_Regresar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Btn_Regresar.UseVisualStyleBackColor = false;
+            this.Btn_Regresar.Click += new System.EventHandler(this.Btn_Regresar_Click);
+            // 
             // frm_adminEntrenadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(910, 580);
+            this.ClientSize = new System.Drawing.Size(949, 607);
+            this.Controls.Add(this.Btn_Regresar);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Cbo_equipo);
             this.Controls.Add(this.Txt_codigoEntrenador);
             this.Controls.Add(this.Lbl_codigoEntrenador);
             this.Controls.Add(this.Gpb_estado);
@@ -342,21 +391,24 @@
         private System.Windows.Forms.Button Btn_cerrar;
         private System.Windows.Forms.Label Lbl_administracionArbitros;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox Txt_especialidadEntrenador;
         private System.Windows.Forms.Label Lbl_especialidadEntrenador;
-        private System.Windows.Forms.TextBox Txt_apellidoEntrenador;
-        private System.Windows.Forms.TextBox Txt_nombreEntrenador;
         private System.Windows.Forms.Label Lbl_apellidoEntrenador;
         private System.Windows.Forms.Label Lbl_nombreEntrenador;
-        private System.Windows.Forms.Button Btn_salir;
-        private System.Windows.Forms.Button Btn_ingresar;
         public System.Windows.Forms.Button Btn_modificar;
         public System.Windows.Forms.Button Btn_eliminar;
         public System.Windows.Forms.Button Btn_guardar;
-        private System.Windows.Forms.GroupBox Gpb_estado;
         private System.Windows.Forms.RadioButton Rbd_deshabilitado;
         private System.Windows.Forms.RadioButton Rdb_habilitado;
         public System.Windows.Forms.TextBox Txt_codigoEntrenador;
         private System.Windows.Forms.Label Lbl_codigoEntrenador;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.ComboBox Cbo_equipo;
+        public System.Windows.Forms.TextBox Txt_especialidadEntrenador;
+        public System.Windows.Forms.TextBox Txt_apellidoEntrenador;
+        public System.Windows.Forms.TextBox Txt_nombreEntrenador;
+        public System.Windows.Forms.Button Btn_salir;
+        public System.Windows.Forms.Button Btn_ingresar;
+        public System.Windows.Forms.GroupBox Gpb_estado;
+        public System.Windows.Forms.Button Btn_Regresar;
     }
 }

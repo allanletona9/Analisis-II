@@ -53,17 +53,17 @@
     <Compile Include="frm_login.Designer.cs">
       <DependentUpon>frm_login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\frm_adminArbitros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frm_adminArbitros.designer.cs">
+      <DependentUpon>frm_adminArbitros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\frm_adminCampeonatos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Mantenimientos\frm_adminCampeonatos.Designer.cs">
       <DependentUpon>frm_adminCampeonatos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Mantenimientos\frm_adminArbitros.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Mantenimientos\frm_adminArbitros.Designer.cs">
-      <DependentUpon>frm_adminArbitros.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimientos\frm_adminCampos.cs">
       <SubType>Form</SubType>
@@ -161,6 +161,30 @@
     <Compile Include="Mantenimientos\frm_sanciones.Designer.cs">
       <DependentUpon>frm_sanciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Seguridad\frm_bitacora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\frm_bitacora.Designer.cs">
+      <DependentUpon>frm_bitacora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\frm_cambio_contraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\frm_cambio_contraseña.Designer.cs">
+      <DependentUpon>frm_cambio_contraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\frm_creacion_usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\frm_creacion_usuarios.Designer.cs">
+      <DependentUpon>frm_creacion_usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\frm_usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\frm_usuarios.Designer.cs">
+      <DependentUpon>frm_usuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDIPolideportivo_admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,14 +223,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Seguridad\frm_tipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\frm_tipo.Designer.cs">
+      <DependentUpon>frm_tipo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frm_login.resx">
       <DependentUpon>frm_login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimientos\frm_adminCampeonatos.resx">
-      <DependentUpon>frm_adminCampeonatos.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\frm_adminArbitros.resx">
       <DependentUpon>frm_adminArbitros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frm_adminCampeonatos.resx">
+      <DependentUpon>frm_adminCampeonatos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\frm_adminCampos.resx">
       <DependentUpon>frm_adminCampos.cs</DependentUpon>
@@ -256,6 +286,18 @@
     <EmbeddedResource Include="Mantenimientos\frm_sanciones.resx">
       <DependentUpon>frm_sanciones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\frm_bitacora.resx">
+      <DependentUpon>frm_bitacora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\frm_cambio_contraseña.resx">
+      <DependentUpon>frm_cambio_contraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\frm_creacion_usuarios.resx">
+      <DependentUpon>frm_creacion_usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\frm_usuarios.resx">
+      <DependentUpon>frm_usuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDIPolideportivo_admin.resx">
       <DependentUpon>MDIPolideportivo_admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -284,6 +326,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Seguridad\frm_tipo.resx">
+      <DependentUpon>frm_tipo.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -323,6 +368,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\login %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-retroceder-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

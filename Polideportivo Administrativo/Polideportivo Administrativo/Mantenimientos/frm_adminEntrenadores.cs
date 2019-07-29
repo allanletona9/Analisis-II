@@ -1,26 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.Odbc;
 using System.Windows.Forms;
+using System.Net.NetworkInformation;
+using System.Data.SqlClient;
+using System.Net;
 
 namespace Polideportivo_Administrativo.Mantenimientos
 {
     public partial class frm_adminEntrenadores : Form
     {
+
+        bool boton_ingreso = false;
+        bool boton_modificar = false;
+        bool boton_eliminar = false;
+        OdbcCommand cmd;
+        byte[] ficheroBLOB = null;
+        List<int> lIdEquipo = new List<int>();
+
         public frm_adminEntrenadores()
         {
             //Autor: Eduardo Colon
             InitializeComponent();
+            llenarComboBox();
+            Rdb_habilitado.Checked = true;
+        }
+
+        private void llenarComboBox()
+        {
+            OdbcCommand sql = new OdbcCommand("Select PK_idEquipo, nombre_equipo from tbl_equipos WHERE estado_equipo=1", conexion.conectar());
+            OdbcDataReader almacena = sql.ExecuteReader();
+            while (almacena.Read() == true)
+            {
+                Cbo_equipo.Items.Add(almacena.GetString(1));
+                lIdEquipo.Add(almacena.GetInt32(0));
+            }
+            almacena.Close();
         }
 
         private void frm_adminEntrenadores_Load(object sender, EventArgs e)
         {
-
+            Txt_codigoEntrenador.Enabled = false;
         }
 
         private void Btn_cerrar_Click(object sender, EventArgs e)
@@ -30,6 +50,231 @@ namespace Polideportivo_Administrativo.Mantenimientos
 
         private void Btn_salir_Click(object sender, EventArgs e)
         {
+            this.Close();
+            
+        }
+
+        void habilitarBotones()
+        {
+            Txt_nombreEntrenador.Enabled = true;
+            Txt_apellidoEntrenador.Enabled = true;
+            Txt_especialidadEntrenador.Enabled = true;
+            Cbo_equipo.Enabled = true;
+            Gpb_estado.Enabled = true;
+        }
+
+        void bloquearBotones()
+        {
+            Btn_eliminar.Enabled = false;
+            Btn_ingresar.Enabled = false;
+            Btn_modificar.Enabled = false;
+        }
+
+        void habilitarTodo()
+        {
+            Txt_nombreEntrenador.Enabled = true;
+            Txt_apellidoEntrenador.Enabled = true;
+            Txt_especialidadEntrenador.Enabled = true;
+            Cbo_equipo.Enabled = true;
+            Gpb_estado.Enabled = true;
+            Btn_eliminar.Enabled = true;
+            Btn_ingresar.Enabled = true;
+            Btn_modificar.Enabled = true;
+        }
+
+        private void Btn_ingresar_Click(object sender, EventArgs e)
+        {
+            habilitarBotones();
+            bloquearBotones();
+            Txt_nombreEntrenador.Text = "";
+            Txt_apellidoEntrenador.Text = "";
+            Txt_especialidadEntrenador.Text = "";
+            Cbo_equipo.Text = "";
+            Gpb_estado.Enabled = false;
+            boton_ingreso = true;
+        }
+
+        private void Btn_modificar_Click(object sender, EventArgs e)
+        {
+            habilitarBotones();
+            bloquearBotones();
+            boton_modificar = true;
+            boton_ingreso = false;
+        }
+
+        private void Btn_eliminar_Click(object sender, EventArgs e)
+        {
+            habilitarBotones();
+            bloquearBotones();
+            boton_eliminar = true;
+            boton_ingreso = false;
+        }
+
+        private void Btn_guardar_Click(object sender, EventArgs e)
+        {
+
+            string host = Dns.GetHostName();
+            IPAddress[] IP = Dns.GetHostAddresses(host);
+            string sFecha = DateTime.Now.ToString("yyy/MM/dd");
+            string sHora = DateTime.Now.ToString("hh:mm:ss");
+
+
+            if (boton_ingreso == true)
+            {
+
+                bool ingresoCorrecto = true;
+                try
+                {
+
+                    if (Txt_nombreEntrenador.Text == "" || Txt_apellidoEntrenador.Text == "" || Txt_especialidadEntrenador.Text == "")
+                    {
+                        MessageBox.Show("Hacen Falta Campos Por Llenar", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ingresoCorrecto = false;
+                    }
+                    else
+                    {
+                        cmd = new OdbcCommand("INSERT INTO tbl_entrenadores(nombre_entrenador, apellido_entrenador, especialidad_entrenador, estado_entrenador) VALUES ('"
+                            + Txt_nombreEntrenador.Text + "', '" + Txt_apellidoEntrenador.Text + "', '" + Txt_especialidadEntrenador.Text + "' , 1)", conexion.conectar());
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                catch (OdbcException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    ingresoCorrecto = false;
+                }
+
+                if (ingresoCorrecto)
+                {
+                    MessageBox.Show("Entrenador Ingresado Correctamente");
+                    Txt_nombreEntrenador.Text = "";
+                    Txt_apellidoEntrenador.Text = "";
+                    Txt_especialidadEntrenador.Text = "";
+                    Cbo_equipo.Text = "";
+                    habilitarTodo();
+
+                    int iLastId = 0;
+                    OdbcCommand sql = new OdbcCommand("SELECT PK_idEntrenador FROM tbl_entrenadores ORDER by PK_idEntrenador DESC LIMIT 1", conexion.conectar());
+                    OdbcDataReader almacena = sql.ExecuteReader();
+                    while (almacena.Read() == true)
+                    {
+                        iLastId = almacena.GetInt32(0);
+                    }
+                    almacena.Close();
+
+
+                    cmd = new OdbcCommand("INSERT INTO tbl_equipos_entrenadores(PK_idEntrenador, PK_idEquipo) VALUES ("
+                            + iLastId.ToString() + ", " + lIdEquipo[Cbo_equipo.SelectedIndex].ToString() + " )", conexion.conectar());
+                    cmd.ExecuteNonQuery();
+
+                    cmd = new OdbcCommand("INSERT INTO tbl_bitacora(PK_idUsuario, accion, fecha, hora, tabla, host) VALUES (1,'INSERTAR','" + sFecha + "','" + sHora + "', 'tbl_entrenadores', '" + host + "')", conexion.conectar());
+                    cmd.ExecuteNonQuery();
+
+                }
+            }
+            else if (boton_modificar == true)
+            {
+                bool ingresoCorrecto = true;
+                try
+                {
+
+                    if (Txt_nombreEntrenador.Text == "" || Txt_apellidoEntrenador.Text == "" || Txt_especialidadEntrenador.Text == "")
+                    {
+                        MessageBox.Show("Hacen Falta Campos Por Llenar", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ingresoCorrecto = false;
+                    }
+                    else
+                    {
+                        if (Rdb_habilitado.Checked == true)
+                        {
+                            cmd = new OdbcCommand("UPDATE tbl_entrenadores SET nombre_entrenador='" + Txt_nombreEntrenador.Text
+                               + "', apellido_entrenador='" + Txt_apellidoEntrenador.Text
+                               + "', especialidad_entrenador='" + Txt_especialidadEntrenador.Text
+                               + "' , estado_entrenador=1 "
+                               + " WHERE PK_idEntrenador="
+                               + Txt_codigoEntrenador.Text
+                                , conexion.conectar());
+                            cmd.ExecuteNonQuery();
+
+
+                            cmd = new OdbcCommand("UPDATE tbl_equipos_entrenadores SET PK_idEquipo=" + lIdEquipo[Cbo_equipo.SelectedIndex].ToString() +
+                          " WHERE PK_idEntrenador =" + Txt_codigoEntrenador.Text, conexion.conectar());
+                            cmd.ExecuteNonQuery();
+                        }
+                        else if (Rbd_deshabilitado.Checked == true)
+                        {
+                            cmd = new OdbcCommand("UPDATE tbl_entrenadores SET nombre_entrenador='" + Txt_nombreEntrenador.Text
+                             + "', apellido_entrenador='" + Txt_apellidoEntrenador.Text
+                             + "', especialidad_entrenador='" + Txt_especialidadEntrenador.Text
+                             + "' , estado_entrenador=0 "
+                             + " WHERE PK_idEntrenador="
+                             + Txt_codigoEntrenador.Text
+                              , conexion.conectar());
+                            cmd.ExecuteNonQuery();
+
+                            cmd = new OdbcCommand("UPDATE tbl_equipos_entrenadores SET PK_idEquipo=" + lIdEquipo[Cbo_equipo.SelectedIndex].ToString() +
+                          " WHERE PK_idEntrenador =" + Txt_codigoEntrenador.Text, conexion.conectar());
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                }
+                catch (OdbcException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    ingresoCorrecto = false;
+                }
+
+                if (ingresoCorrecto)
+                {
+                    MessageBox.Show("Entrenador Modificado Correctamente");
+                    Txt_nombreEntrenador.Text = "";
+                    Txt_apellidoEntrenador.Text = "";
+                    Txt_especialidadEntrenador.Text = "";
+                    Cbo_equipo.Text = "";
+                    Rdb_habilitado.Checked = false;
+                    Rbd_deshabilitado.Checked = false;
+                    habilitarTodo();
+
+                    cmd = new OdbcCommand("INSERT INTO tbl_bitacora(PK_idUsuario, accion, fecha, hora, tabla, host) VALUES (1,'MODIFICAR','" + sFecha + "','" + sHora + "', 'tbl_entrenadores', '" + host + "')", conexion.conectar());
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            else if (boton_eliminar == true)
+            {
+                bool ingresoCorrecto = true;
+                try
+                {
+                    cmd = new OdbcCommand("UPDATE tbl_entrenadores SET estado_entrenador=0 WHERE PK_idEntrenador ="
+                   + Txt_codigoEntrenador.Text, conexion.conectar());
+                    cmd.ExecuteNonQuery();
+                }
+                catch (OdbcException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    ingresoCorrecto = false;
+                }
+
+                if (ingresoCorrecto)
+                {
+                    MessageBox.Show("Entrenador Eliminado Correctamente");
+                    Txt_nombreEntrenador.Text = "";
+                    Txt_apellidoEntrenador.Text = "";
+                    Txt_especialidadEntrenador.Text = "";
+                    Cbo_equipo.Text = "";
+                    Rdb_habilitado.Checked = false;
+                    Rbd_deshabilitado.Checked = false;
+                    habilitarTodo();
+
+                    cmd = new OdbcCommand("INSERT INTO tbl_bitacora(PK_idUsuario, accion, fecha, hora, tabla, host) VALUES (1,'ELIMINAR','" + sFecha + "','" + sHora + "', 'tbl_entrenadores', '" + host + "')", conexion.conectar());
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        private void Btn_Regresar_Click(object sender, EventArgs e)
+        {
+            frm_entrenadores entrenadores = new frm_entrenadores();
+            entrenadores.Show();
             this.Close();
         }
     }

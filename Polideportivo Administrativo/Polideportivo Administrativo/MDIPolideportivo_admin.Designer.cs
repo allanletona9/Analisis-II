@@ -51,10 +51,15 @@
             this.controlDeSancionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bitacoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.creacionDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambioContrasñenaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -82,6 +87,7 @@
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
             this.inicioToolStripMenuItem.Size = new System.Drawing.Size(54, 21);
             this.inicioToolStripMenuItem.Text = "Inicio";
+            this.inicioToolStripMenuItem.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click);
             // 
             // cerrarSesionToolStripMenuItem1
             // 
@@ -109,63 +115,63 @@
             // jugadoresToolStripMenuItem
             // 
             this.jugadoresToolStripMenuItem.Name = "jugadoresToolStripMenuItem";
-            this.jugadoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.jugadoresToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.jugadoresToolStripMenuItem.Text = "Jugadores";
             this.jugadoresToolStripMenuItem.Click += new System.EventHandler(this.jugadoresToolStripMenuItem_Click);
             // 
             // equiposToolStripMenuItem
             // 
             this.equiposToolStripMenuItem.Name = "equiposToolStripMenuItem";
-            this.equiposToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.equiposToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.equiposToolStripMenuItem.Text = "Equipos";
             this.equiposToolStripMenuItem.Click += new System.EventHandler(this.equiposToolStripMenuItem_Click);
             // 
             // entrenadoresToolStripMenuItem
             // 
             this.entrenadoresToolStripMenuItem.Name = "entrenadoresToolStripMenuItem";
-            this.entrenadoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.entrenadoresToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.entrenadoresToolStripMenuItem.Text = "Entrenadores";
             this.entrenadoresToolStripMenuItem.Click += new System.EventHandler(this.entrenadoresToolStripMenuItem_Click);
             // 
             // campeonatosToolStripMenuItem
             // 
             this.campeonatosToolStripMenuItem.Name = "campeonatosToolStripMenuItem";
-            this.campeonatosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.campeonatosToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.campeonatosToolStripMenuItem.Text = "Campeonatos";
             this.campeonatosToolStripMenuItem.Click += new System.EventHandler(this.campeonatosToolStripMenuItem_Click);
             // 
             // arbitrosToolStripMenuItem
             // 
             this.arbitrosToolStripMenuItem.Name = "arbitrosToolStripMenuItem";
-            this.arbitrosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.arbitrosToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.arbitrosToolStripMenuItem.Text = "Arbitros";
             this.arbitrosToolStripMenuItem.Click += new System.EventHandler(this.arbitrosToolStripMenuItem_Click);
             // 
             // empleadosToolStripMenuItem
             // 
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.empleadosToolStripMenuItem.Text = "Empleados";
             this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
             // 
             // sancionesToolStripMenuItem
             // 
             this.sancionesToolStripMenuItem.Name = "sancionesToolStripMenuItem";
-            this.sancionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sancionesToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.sancionesToolStripMenuItem.Text = "Sanciones";
             this.sancionesToolStripMenuItem.Click += new System.EventHandler(this.sancionesToolStripMenuItem_Click);
             // 
             // deportesToolStripMenuItem
             // 
             this.deportesToolStripMenuItem.Name = "deportesToolStripMenuItem";
-            this.deportesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deportesToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.deportesToolStripMenuItem.Text = "Deportes";
             this.deportesToolStripMenuItem.Click += new System.EventHandler(this.deportesToolStripMenuItem_Click);
             // 
             // camposToolStripMenuItem
             // 
             this.camposToolStripMenuItem.Name = "camposToolStripMenuItem";
-            this.camposToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.camposToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.camposToolStripMenuItem.Text = "Campos";
             this.camposToolStripMenuItem.Click += new System.EventHandler(this.camposToolStripMenuItem_Click);
             // 
@@ -232,10 +238,43 @@
             // 
             // cerrarSesionToolStripMenuItem
             // 
+            this.cerrarSesionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.usuariosToolStripMenuItem,
+            this.bitacoraToolStripMenuItem,
+            this.creacionDeUsuariosToolStripMenuItem,
+            this.cambioContrasñenaToolStripMenuItem});
             this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
             this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(85, 21);
             this.cerrarSesionToolStripMenuItem.Text = "Seguridad";
             this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            // 
+            // bitacoraToolStripMenuItem
+            // 
+            this.bitacoraToolStripMenuItem.Name = "bitacoraToolStripMenuItem";
+            this.bitacoraToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.bitacoraToolStripMenuItem.Text = "Bitacora";
+            this.bitacoraToolStripMenuItem.Click += new System.EventHandler(this.bitacoraToolStripMenuItem_Click);
+            // 
+            // creacionDeUsuariosToolStripMenuItem
+            // 
+            this.creacionDeUsuariosToolStripMenuItem.Name = "creacionDeUsuariosToolStripMenuItem";
+            this.creacionDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.creacionDeUsuariosToolStripMenuItem.Text = "Creacion de Usuarios";
+            this.creacionDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.creacionDeUsuariosToolStripMenuItem_Click);
+            // 
+            // cambioContrasñenaToolStripMenuItem
+            // 
+            this.cambioContrasñenaToolStripMenuItem.Name = "cambioContrasñenaToolStripMenuItem";
+            this.cambioContrasñenaToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.cambioContrasñenaToolStripMenuItem.Text = "Cambio de Contraseña";
+            this.cambioContrasñenaToolStripMenuItem.Click += new System.EventHandler(this.cambioContrasñenaToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -259,12 +298,24 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.DarkGray;
+            this.lblUsuario.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(616, 6);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(99, 19);
+            this.lblUsuario.TabIndex = 83;
+            this.lblUsuario.Text = "lblUsuario";
+            // 
             // MDIPolideportivo_admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1023, 545);
+            this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
             this.IsMdiContainer = true;
@@ -312,6 +363,11 @@
         private System.Windows.Forms.ToolStripMenuItem consultarCalendarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem controlDeResultadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem controlDeSancionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bitacoraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem creacionDeUsuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cambioContrasñenaToolStripMenuItem;
+        private System.Windows.Forms.Label lblUsuario;
     }
 }
 
