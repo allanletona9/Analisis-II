@@ -60,14 +60,11 @@
             // 
             this.Cbo_seleccionar_equipo.Font = new System.Drawing.Font("Franklin Gothic Medium", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cbo_seleccionar_equipo.FormattingEnabled = true;
-            this.Cbo_seleccionar_equipo.Items.AddRange(new object[] {
-            "Equipo 1",
-            "Equipo 2",
-            "Equipo 3"});
             this.Cbo_seleccionar_equipo.Location = new System.Drawing.Point(308, 132);
             this.Cbo_seleccionar_equipo.Name = "Cbo_seleccionar_equipo";
             this.Cbo_seleccionar_equipo.Size = new System.Drawing.Size(287, 44);
             this.Cbo_seleccionar_equipo.TabIndex = 4;
+            this.Cbo_seleccionar_equipo.SelectedIndexChanged += new System.EventHandler(this.Cbo_seleccionar_equipo_SelectedIndexChanged);
             // 
             // Btn_avanzar
             // 

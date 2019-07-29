@@ -24,10 +24,6 @@ namespace Polideportivo_Administrativo.Mantenimientos
             this.Close();
         }
 
-        void bloquearBotones()
-        {
-
-        }
 
         private void Btn_ingresarEquipo_Click(object sender, EventArgs e)
         {
@@ -35,7 +31,6 @@ namespace Polideportivo_Administrativo.Mantenimientos
             frm_adminEquipos adminEquipos = new frm_adminEquipos();
             adminEquipos.Show();
             adminEquipos.Btn_eliminar.Enabled = false;
-            adminEquipos.Btn_ingresar.Enabled = false;
             adminEquipos.Btn_modificar.Enabled = false;
             adminEquipos.Gpb_estado.Enabled = false;
         }
@@ -67,15 +62,6 @@ namespace Polideportivo_Administrativo.Mantenimientos
         {
             frm_adminEquipos adminEquipos = new frm_adminEquipos();
 
-            /* Codigo por si hay un combo box en el siguiente formulario
-            OdbcCommand sql = new OdbcCommand("Select nombre_sucursal from sucursal where Codigo_sucursal='" + Convert.ToInt16(TablaBodega.CurrentRow.Cells[4].Value) + "'", nueva.nuevaConexion());
-            OdbcDataReader almacena = sql.ExecuteReader();
-            while (almacena.Read() == true)
-            {
-                adminEquipos.cmbCodigoSucursal.Text = almacena.GetString(0);
-            }
-            almacena.Close();
-            */
             adminEquipos.Txt_codigoEquipo.Text = Convert.ToString(Dgv_equipos.CurrentRow.Cells[0].Value);
             adminEquipos.Txt_nombreEquipo.Text = Convert.ToString(Dgv_equipos.CurrentRow.Cells[1].Value);
             adminEquipos.Txt_descripcionEquipo.Text = Convert.ToString(Dgv_equipos.CurrentRow.Cells[2].Value);
@@ -107,6 +93,11 @@ namespace Polideportivo_Administrativo.Mantenimientos
             {
                 MessageBox.Show(er.Message);
             }
+        }
+
+        private void Btn_salida_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

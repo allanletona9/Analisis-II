@@ -20,16 +20,15 @@ namespace Polideportivo
 {
     public partial class Menu : Form
     {
-        String sIdEquipo = null;
+        String sIdEquipo = null, sIdEntrenador = null;
         //Autor Diego Gomez
         conexion nueva = new conexion();
 
-        String nombreUsuario, tipo;
-
-        public Menu(String sIdEquipo)
+        public Menu(String sIdEntrenador, String sIdEquipo)
         {
 
             InitializeComponent();
+            this.sIdEntrenador = sIdEntrenador;
             this.sIdEquipo = sIdEquipo;
         }
 
@@ -123,7 +122,7 @@ namespace Polideportivo
 
         private void seleccionarEquipoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SeleccionarEquipo seleccionarEquipo = new SeleccionarEquipo("Menu", sIdEquipo);
+            SeleccionarEquipo seleccionarEquipo = new SeleccionarEquipo("Menu",sIdEntrenador , sIdEquipo);
             seleccionarEquipo.Show();
             Hide();
         }

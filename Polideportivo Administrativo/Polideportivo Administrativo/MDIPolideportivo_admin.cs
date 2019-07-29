@@ -17,14 +17,18 @@ namespace Polideportivo_Administrativo
 {
     public partial class MDIPolideportivo_admin : Form
     {
+
         private int childFormNumber = 0;
         conexion nueva = new conexion();
 
+        String nombreUsuario, tipo;
         public MDIPolideportivo_admin(String nombreUsuario, String tipo)
         {
-            //Autor: Allan Letona
+            this.nombreUsuario = nombreUsuario;
+            this.tipo = tipo;
             InitializeComponent();
-            
+            lblUsuario.Text = "Usuario: " + nombreUsuario;
+
         }
 
         private void ShowNewForm(object sender, EventArgs e)
@@ -125,8 +129,10 @@ namespace Polideportivo_Administrativo
 
         private void cerrarSesionToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            //Autor: Diego Gomez
-            conexion nueva = new conexion();
+            
+
+        //Autor: Diego Gomez
+        conexion nueva = new conexion();
             OdbcCommand cmd;
             cmd = new OdbcCommand("INSERT INTO tbl_bitacora (PK_idBitacora," +
                   "PK_idUsuario, " +

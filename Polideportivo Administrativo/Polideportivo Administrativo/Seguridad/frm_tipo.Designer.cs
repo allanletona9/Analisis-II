@@ -66,7 +66,7 @@
             this.Btn_cerrar.BackgroundImage = global::Polideportivo_Administrativo.Properties.Resources.icons8_cerrar_ventana_48;
             this.Btn_cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_cerrar.ForeColor = System.Drawing.Color.DarkRed;
+            this.Btn_cerrar.ForeColor = System.Drawing.Color.Teal;
             this.Btn_cerrar.Location = new System.Drawing.Point(916, 3);
             this.Btn_cerrar.Name = "Btn_cerrar";
             this.Btn_cerrar.Size = new System.Drawing.Size(30, 29);
@@ -139,7 +139,7 @@
             this.Btn_ingresar.UseVisualStyleBackColor = false;
             this.Btn_ingresar.Click += new System.EventHandler(this.Btn_ingresar_Click);
             // 
-            // tipo
+            // frm_tipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -148,7 +148,7 @@
             this.Controls.Add(this.Gpb_estado);
             this.Controls.Add(this.Pnl_titulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "tipo";
+            this.Name = "frm_tipo";
             this.Text = " ";
             this.Load += new System.EventHandler(this.tipo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

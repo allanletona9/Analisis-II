@@ -8,14 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
+using System.Net.NetworkInformation;
+using System.Data.SqlClient;
+using System.Net;
 
 namespace Polideportivo_Administrativo.Mantenimientos
 {
     public partial class frm_adminEquipos : Form
     {
-        bool boton_ingreso = false;
-        bool boton_modificar = false;
-        bool boton_eliminar = false;
+        bool bBoton_ingreso = false;
+        bool bBoton_modificar = false;
+        bool bBoton_eliminar = false;
         OdbcCommand cmd;
 
         public frm_adminEquipos()
@@ -39,8 +42,7 @@ namespace Polideportivo_Administrativo.Mantenimientos
         private void Btn_salir_Click(object sender, EventArgs e)
         {
             this.Close();
-            frm_equipos equipos = new frm_equipos();
-            equipos.Show();
+           
         }
 
         void habilitarBotones()
@@ -74,36 +76,42 @@ namespace Polideportivo_Administrativo.Mantenimientos
             Txt_nombreEquipo.Text = "";
             Txt_descripcionEquipo.Text = "";
             Gpb_estado.Enabled = false;
-            boton_ingreso = true;
+            bBoton_ingreso = true;
         }
 
         private void Btn_modificar_Click(object sender, EventArgs e)
         {
             habilitarBotones();
             bloquearBotones();
-            boton_modificar = true;
+            bBoton_modificar = true;
         }
 
         private void Btn_eliminar_Click(object sender, EventArgs e)
         {
             habilitarBotones();
             bloquearBotones();
-            boton_eliminar = true;
+            bBoton_eliminar = true;
         }
 
         private void Btn_guardar_Click(object sender, EventArgs e)
         {
-            if(boton_ingreso==true)
+            bool bIngresoCorrecto = true;
+            string host = Dns.GetHostName();
+            IPAddress[] IP = Dns.GetHostAddresses(host);
+            string sFecha = DateTime.Now.ToString("yyy/MM/dd");
+            string sHora = DateTime.Now.ToString("hh:mm:ss");
+
+
+            if (bBoton_ingreso==true)
             {
                 
-                bool ingresoCorrecto = true;
                 try
                 {
 
                     if ((Txt_nombreEquipo.Text == "" || Txt_descripcionEquipo.Text == ""))
                     {
                         MessageBox.Show("Hacen Falta Campos Por Llenar", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ingresoCorrecto = false;
+                        bIngresoCorrecto = false;
                     }
                     else
                     {
@@ -115,40 +123,43 @@ namespace Polideportivo_Administrativo.Mantenimientos
                 catch (OdbcException ex)
                 {
                     MessageBox.Show(ex.Message);
-                    ingresoCorrecto = false;
+                    bIngresoCorrecto = false;
                 }
 
-                if (ingresoCorrecto)
+                if (bIngresoCorrecto)
                 {
                     MessageBox.Show("Equipo Ingresado Correctamente");
                     Txt_nombreEquipo.Text = " ";
                     Txt_descripcionEquipo.Text = " ";
                     habilitarTodo();
+                    cmd = new OdbcCommand("INSERT INTO tbl_bitacora(PK_idUsuario, accion, fecha, hora, tabla, host) VALUES (1,'INSERTAR','"+sFecha+"','"+sHora+"', 'tbl_equipos', '"+host+"')", conexion.conectar());
+                    cmd.ExecuteNonQuery();
                 }
             }
-            else if(boton_modificar==true)
+            else if(bBoton_modificar==true)
             {
-                bool ingresoCorrecto = true;
+                //bool ingresoCorrecto = true;
                 try
                 {
 
                     if ((Txt_nombreEquipo.Text == "" || Txt_descripcionEquipo.Text == ""))
                     {
                         MessageBox.Show("Hacen Falta Campos Por Llenar", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ingresoCorrecto = false;
+                        bIngresoCorrecto = false;
                     }
                     else
                     {
                         if (Rdb_habilitado.Checked == true)
                         {
-                            cmd = new OdbcCommand("UPDATE tbl_equipos SET nombre_equipo='"+Txt_nombreEquipo.Text+"', descripcion_equipo='"+Txt_descripcionEquipo+"', estado_equipo=1", conexion.conectar());
+                            cmd = new OdbcCommand("UPDATE tbl_equipos SET nombre_equipo='"+Txt_nombreEquipo.Text+"', descripcion_equipo='"+Txt_descripcionEquipo.Text+"', estado_equipo=1 WHERE PK_idEquipo = '"+Txt_codigoEquipo.Text+"'", conexion.conectar());
                             cmd.ExecuteNonQuery();
+
                             
 
                         }
                         else if (Rbd_deshabilitado.Checked == true)
                         {
-                            cmd = new OdbcCommand("UPDATE tbl_equipos SET nombre_equipo='" + Txt_nombreEquipo.Text + "', descripcion_equipo='" + Txt_descripcionEquipo + "', estado_equipo=0", conexion.conectar());
+                            cmd = new OdbcCommand("UPDATE tbl_equipos SET nombre_equipo='" + Txt_nombreEquipo.Text + "', descripcion_equipo='" + Txt_descripcionEquipo.Text + "', estado_equipo=0 WHERE PK_idEquipo = '" + Txt_codigoEquipo.Text + "'", conexion.conectar());
                             cmd.ExecuteNonQuery();
                         }
 
@@ -157,10 +168,10 @@ namespace Polideportivo_Administrativo.Mantenimientos
                 catch (OdbcException ex)
                 {
                     MessageBox.Show(ex.Message);
-                    ingresoCorrecto = false;
+                    bIngresoCorrecto = false;
                 }
 
-                if (ingresoCorrecto)
+                if (bIngresoCorrecto)
                 {
                     MessageBox.Show("Equipo Modificado Correctamente");
                     Txt_codigoEquipo.Text = " ";
@@ -169,11 +180,14 @@ namespace Polideportivo_Administrativo.Mantenimientos
                     Rdb_habilitado.Checked =false;
                     Rbd_deshabilitado.Checked = false;
                     habilitarTodo();
+
+                    cmd = new OdbcCommand("INSERT INTO tbl_bitacora(PK_idUsuario, accion, fecha, hora, tabla, host) VALUES (1,'MODIFICAR','" + sFecha + "','" + sHora + "', 'tbl_equipos', '" + host + "')", conexion.conectar());
+                    cmd.ExecuteNonQuery();
                 }
             }
-            else if(boton_eliminar==true)
+            else if(bBoton_eliminar==true)
             {
-                bool ingresoCorrecto = true;
+                //bool ingresoCorrecto = true;
                 try
                 {
                     cmd = new OdbcCommand("UPDATE tbl_equipos SET estado_equipo=0 WHERE PK_idEquipo ='"
@@ -183,10 +197,10 @@ namespace Polideportivo_Administrativo.Mantenimientos
                 catch(OdbcException ex)
                 {
                     MessageBox.Show(ex.Message);
-                    ingresoCorrecto = false;
+                    bIngresoCorrecto = false;
                 }
 
-                if (ingresoCorrecto)
+                if (bIngresoCorrecto)
                 {
                     MessageBox.Show("Equipo Eliminado Correctamente");
                     Txt_codigoEquipo.Text = " ";
@@ -195,8 +209,18 @@ namespace Polideportivo_Administrativo.Mantenimientos
                     Rdb_habilitado.Checked = false;
                     Rbd_deshabilitado.Checked = false;
                     habilitarTodo();
+
+                    cmd = new OdbcCommand("INSERT INTO tbl_bitacora(PK_idUsuario, accion, fecha, hora, tabla, host) VALUES (1,'ELIMINAR','" + sFecha + "','" + sHora + "', 'tbl_equipos', '" + host + "')", conexion.conectar());
+                    cmd.ExecuteNonQuery();
                 }
             }
+        }
+
+        private void Btn_Regresar_Click(object sender, EventArgs e)
+        {
+            frm_equipos equipos = new frm_equipos();
+            equipos.Show();
+            this.Close();
         }
     }
 }

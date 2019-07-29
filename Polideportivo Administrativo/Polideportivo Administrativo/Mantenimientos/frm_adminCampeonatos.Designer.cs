@@ -32,8 +32,8 @@
             this.Btn_cerrar = new System.Windows.Forms.Button();
             this.Lbl_administracionArbitros = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.Txt_apellidoArbitro = new System.Windows.Forms.TextBox();
-            this.Txt_nombreArbitro = new System.Windows.Forms.TextBox();
+            this.Txt_descripcionCampeonato = new System.Windows.Forms.TextBox();
+            this.Txt_nombreCampeonato = new System.Windows.Forms.TextBox();
             this.Lbl_descripcionCampeonato = new System.Windows.Forms.Label();
             this.Lbl_nombreCampeonato = new System.Windows.Forms.Label();
             this.Gpb_estado = new System.Windows.Forms.GroupBox();
@@ -44,16 +44,15 @@
             this.Btn_modificar = new System.Windows.Forms.Button();
             this.Btn_eliminar = new System.Windows.Forms.Button();
             this.Btn_guardar = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Cbo_deportes = new System.Windows.Forms.ComboBox();
             this.Lbl_deporte = new System.Windows.Forms.Label();
             this.Lbl_cantidadEquipos = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.Lbl_diaCampeonato = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.Lbl_horarioCampeonato = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Txt_cantidadEquipos = new System.Windows.Forms.TextBox();
             this.Txt_codigoCampeonato = new System.Windows.Forms.TextBox();
             this.Lbl_codigoCampeonato = new System.Windows.Forms.Label();
+            this.Txt_precioCampeonato = new System.Windows.Forms.TextBox();
+            this.Lbl_precioCampeonato = new System.Windows.Forms.Label();
+            this.Btn_Regresar = new System.Windows.Forms.Button();
             this.Pnl_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Gpb_estado.SuspendLayout();
@@ -61,7 +60,7 @@
             // 
             // Pnl_titulo
             // 
-            this.Pnl_titulo.BackColor = System.Drawing.Color.DarkRed;
+            this.Pnl_titulo.BackColor = System.Drawing.Color.DarkSlateGray;
             this.Pnl_titulo.Controls.Add(this.Btn_cerrar);
             this.Pnl_titulo.Controls.Add(this.Lbl_administracionArbitros);
             this.Pnl_titulo.Controls.Add(this.pictureBox2);
@@ -69,7 +68,7 @@
             this.Pnl_titulo.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.Pnl_titulo.Location = new System.Drawing.Point(0, 0);
             this.Pnl_titulo.Name = "Pnl_titulo";
-            this.Pnl_titulo.Size = new System.Drawing.Size(910, 49);
+            this.Pnl_titulo.Size = new System.Drawing.Size(949, 35);
             this.Pnl_titulo.TabIndex = 145;
             // 
             // Btn_cerrar
@@ -77,10 +76,10 @@
             this.Btn_cerrar.BackgroundImage = global::Polideportivo_Administrativo.Properties.Resources.icons8_cerrar_ventana_48;
             this.Btn_cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_cerrar.ForeColor = System.Drawing.Color.DarkRed;
-            this.Btn_cerrar.Location = new System.Drawing.Point(864, 3);
+            this.Btn_cerrar.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.Btn_cerrar.Location = new System.Drawing.Point(916, 3);
             this.Btn_cerrar.Name = "Btn_cerrar";
-            this.Btn_cerrar.Size = new System.Drawing.Size(46, 43);
+            this.Btn_cerrar.Size = new System.Drawing.Size(30, 29);
             this.Btn_cerrar.TabIndex = 7;
             this.Btn_cerrar.UseVisualStyleBackColor = false;
             this.Btn_cerrar.Click += new System.EventHandler(this.Btn_cerrar_Click);
@@ -90,7 +89,7 @@
             this.Lbl_administracionArbitros.AutoSize = true;
             this.Lbl_administracionArbitros.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_administracionArbitros.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.Lbl_administracionArbitros.Location = new System.Drawing.Point(45, 12);
+            this.Lbl_administracionArbitros.Location = new System.Drawing.Point(45, 8);
             this.Lbl_administracionArbitros.Name = "Lbl_administracionArbitros";
             this.Lbl_administracionArbitros.Size = new System.Drawing.Size(386, 24);
             this.Lbl_administracionArbitros.TabIndex = 2;
@@ -99,33 +98,33 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Polideportivo_Administrativo.Properties.Resources.icons8_modo_deportes_24;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(27, 27);
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // Txt_apellidoArbitro
+            // Txt_descripcionCampeonato
             // 
-            this.Txt_apellidoArbitro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_apellidoArbitro.Location = new System.Drawing.Point(448, 272);
-            this.Txt_apellidoArbitro.Name = "Txt_apellidoArbitro";
-            this.Txt_apellidoArbitro.Size = new System.Drawing.Size(230, 23);
-            this.Txt_apellidoArbitro.TabIndex = 155;
+            this.Txt_descripcionCampeonato.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_descripcionCampeonato.Location = new System.Drawing.Point(444, 308);
+            this.Txt_descripcionCampeonato.Name = "Txt_descripcionCampeonato";
+            this.Txt_descripcionCampeonato.Size = new System.Drawing.Size(230, 23);
+            this.Txt_descripcionCampeonato.TabIndex = 155;
             // 
-            // Txt_nombreArbitro
+            // Txt_nombreCampeonato
             // 
-            this.Txt_nombreArbitro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_nombreArbitro.Location = new System.Drawing.Point(448, 234);
-            this.Txt_nombreArbitro.Name = "Txt_nombreArbitro";
-            this.Txt_nombreArbitro.Size = new System.Drawing.Size(230, 23);
-            this.Txt_nombreArbitro.TabIndex = 154;
+            this.Txt_nombreCampeonato.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_nombreCampeonato.Location = new System.Drawing.Point(444, 270);
+            this.Txt_nombreCampeonato.Name = "Txt_nombreCampeonato";
+            this.Txt_nombreCampeonato.Size = new System.Drawing.Size(230, 23);
+            this.Txt_nombreCampeonato.TabIndex = 154;
             // 
             // Lbl_descripcionCampeonato
             // 
             this.Lbl_descripcionCampeonato.AutoSize = true;
             this.Lbl_descripcionCampeonato.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_descripcionCampeonato.Location = new System.Drawing.Point(265, 275);
+            this.Lbl_descripcionCampeonato.Location = new System.Drawing.Point(261, 311);
             this.Lbl_descripcionCampeonato.Name = "Lbl_descripcionCampeonato";
             this.Lbl_descripcionCampeonato.Size = new System.Drawing.Size(177, 17);
             this.Lbl_descripcionCampeonato.TabIndex = 153;
@@ -135,7 +134,7 @@
             // 
             this.Lbl_nombreCampeonato.AutoSize = true;
             this.Lbl_nombreCampeonato.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_nombreCampeonato.Location = new System.Drawing.Point(265, 234);
+            this.Lbl_nombreCampeonato.Location = new System.Drawing.Point(261, 270);
             this.Lbl_nombreCampeonato.Name = "Lbl_nombreCampeonato";
             this.Lbl_nombreCampeonato.Size = new System.Drawing.Size(155, 17);
             this.Lbl_nombreCampeonato.TabIndex = 152;
@@ -146,7 +145,7 @@
             this.Gpb_estado.Controls.Add(this.Rbd_deshabilitado);
             this.Gpb_estado.Controls.Add(this.Rdb_habilitado);
             this.Gpb_estado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gpb_estado.Location = new System.Drawing.Point(250, 426);
+            this.Gpb_estado.Location = new System.Drawing.Point(251, 438);
             this.Gpb_estado.Name = "Gpb_estado";
             this.Gpb_estado.Size = new System.Drawing.Size(434, 100);
             this.Gpb_estado.TabIndex = 151;
@@ -186,7 +185,7 @@
             this.Btn_salir.ForeColor = System.Drawing.SystemColors.Desktop;
             this.Btn_salir.Image = global::Polideportivo_Administrativo.Properties.Resources.icons8_cerrar_ventana_481;
             this.Btn_salir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Btn_salir.Location = new System.Drawing.Point(582, 69);
+            this.Btn_salir.Location = new System.Drawing.Point(654, 69);
             this.Btn_salir.Name = "Btn_salir";
             this.Btn_salir.Size = new System.Drawing.Size(90, 75);
             this.Btn_salir.TabIndex = 150;
@@ -206,13 +205,14 @@
             this.Btn_ingresar.ForeColor = System.Drawing.SystemColors.Desktop;
             this.Btn_ingresar.Image = global::Polideportivo_Administrativo.Properties.Resources.icons8_añadir_48;
             this.Btn_ingresar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Btn_ingresar.Location = new System.Drawing.Point(238, 69);
+            this.Btn_ingresar.Location = new System.Drawing.Point(223, 69);
             this.Btn_ingresar.Name = "Btn_ingresar";
             this.Btn_ingresar.Size = new System.Drawing.Size(90, 75);
             this.Btn_ingresar.TabIndex = 149;
             this.Btn_ingresar.Text = "INGRESAR ";
             this.Btn_ingresar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_ingresar.UseVisualStyleBackColor = false;
+            this.Btn_ingresar.Click += new System.EventHandler(this.Btn_ingresar_Click);
             // 
             // Btn_modificar
             // 
@@ -225,13 +225,14 @@
             this.Btn_modificar.ForeColor = System.Drawing.SystemColors.Desktop;
             this.Btn_modificar.Image = global::Polideportivo_Administrativo.Properties.Resources.icons8_historial_de_pedidos_48;
             this.Btn_modificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Btn_modificar.Location = new System.Drawing.Point(410, 69);
+            this.Btn_modificar.Location = new System.Drawing.Point(395, 69);
             this.Btn_modificar.Name = "Btn_modificar";
             this.Btn_modificar.Size = new System.Drawing.Size(90, 75);
             this.Btn_modificar.TabIndex = 148;
             this.Btn_modificar.Text = "MODIFICAR ";
             this.Btn_modificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_modificar.UseVisualStyleBackColor = false;
+            this.Btn_modificar.Click += new System.EventHandler(this.Btn_modificar_Click);
             // 
             // Btn_eliminar
             // 
@@ -244,13 +245,14 @@
             this.Btn_eliminar.ForeColor = System.Drawing.SystemColors.Desktop;
             this.Btn_eliminar.Image = global::Polideportivo_Administrativo.Properties.Resources.icons8_eliminar_48;
             this.Btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Btn_eliminar.Location = new System.Drawing.Point(496, 69);
+            this.Btn_eliminar.Location = new System.Drawing.Point(481, 69);
             this.Btn_eliminar.Name = "Btn_eliminar";
             this.Btn_eliminar.Size = new System.Drawing.Size(90, 75);
             this.Btn_eliminar.TabIndex = 147;
             this.Btn_eliminar.Text = "ELIMINAR";
             this.Btn_eliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_eliminar.UseVisualStyleBackColor = false;
+            this.Btn_eliminar.Click += new System.EventHandler(this.Btn_eliminar_Click);
             // 
             // Btn_guardar
             // 
@@ -263,28 +265,29 @@
             this.Btn_guardar.ForeColor = System.Drawing.SystemColors.Desktop;
             this.Btn_guardar.Image = global::Polideportivo_Administrativo.Properties.Resources.icons8_guardar_48;
             this.Btn_guardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Btn_guardar.Location = new System.Drawing.Point(325, 69);
+            this.Btn_guardar.Location = new System.Drawing.Point(310, 69);
             this.Btn_guardar.Name = "Btn_guardar";
             this.Btn_guardar.Size = new System.Drawing.Size(90, 75);
             this.Btn_guardar.TabIndex = 146;
             this.Btn_guardar.Text = "GUARDAR";
             this.Btn_guardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_guardar.UseVisualStyleBackColor = false;
+            this.Btn_guardar.Click += new System.EventHandler(this.Btn_guardar_Click);
             // 
-            // comboBox1
+            // Cbo_deportes
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(448, 198);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(230, 25);
-            this.comboBox1.TabIndex = 156;
+            this.Cbo_deportes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cbo_deportes.FormattingEnabled = true;
+            this.Cbo_deportes.Location = new System.Drawing.Point(444, 234);
+            this.Cbo_deportes.Name = "Cbo_deportes";
+            this.Cbo_deportes.Size = new System.Drawing.Size(230, 25);
+            this.Cbo_deportes.TabIndex = 156;
             // 
             // Lbl_deporte
             // 
             this.Lbl_deporte.AutoSize = true;
             this.Lbl_deporte.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_deporte.Location = new System.Drawing.Point(266, 202);
+            this.Lbl_deporte.Location = new System.Drawing.Point(262, 238);
             this.Lbl_deporte.Name = "Lbl_deporte";
             this.Lbl_deporte.Size = new System.Drawing.Size(61, 17);
             this.Lbl_deporte.TabIndex = 157;
@@ -294,60 +297,24 @@
             // 
             this.Lbl_cantidadEquipos.AutoSize = true;
             this.Lbl_cantidadEquipos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_cantidadEquipos.Location = new System.Drawing.Point(266, 316);
+            this.Lbl_cantidadEquipos.Location = new System.Drawing.Point(262, 395);
             this.Lbl_cantidadEquipos.Name = "Lbl_cantidadEquipos";
             this.Lbl_cantidadEquipos.Size = new System.Drawing.Size(146, 17);
             this.Lbl_cantidadEquipos.TabIndex = 158;
             this.Lbl_cantidadEquipos.Text = "Cantidad de Equipos";
             // 
-            // textBox1
+            // Txt_cantidadEquipos
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(448, 313);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(230, 23);
-            this.textBox1.TabIndex = 159;
-            // 
-            // Lbl_diaCampeonato
-            // 
-            this.Lbl_diaCampeonato.AutoSize = true;
-            this.Lbl_diaCampeonato.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_diaCampeonato.Location = new System.Drawing.Point(266, 355);
-            this.Lbl_diaCampeonato.Name = "Lbl_diaCampeonato";
-            this.Lbl_diaCampeonato.Size = new System.Drawing.Size(124, 17);
-            this.Lbl_diaCampeonato.TabIndex = 160;
-            this.Lbl_diaCampeonato.Text = "Dia Campeonato";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(448, 352);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(230, 23);
-            this.textBox2.TabIndex = 161;
-            // 
-            // Lbl_horarioCampeonato
-            // 
-            this.Lbl_horarioCampeonato.AutoSize = true;
-            this.Lbl_horarioCampeonato.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_horarioCampeonato.Location = new System.Drawing.Point(266, 391);
-            this.Lbl_horarioCampeonato.Name = "Lbl_horarioCampeonato";
-            this.Lbl_horarioCampeonato.Size = new System.Drawing.Size(149, 17);
-            this.Lbl_horarioCampeonato.TabIndex = 162;
-            this.Lbl_horarioCampeonato.Text = "Horario Campeonato";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(448, 388);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(230, 23);
-            this.textBox3.TabIndex = 163;
+            this.Txt_cantidadEquipos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_cantidadEquipos.Location = new System.Drawing.Point(444, 392);
+            this.Txt_cantidadEquipos.Name = "Txt_cantidadEquipos";
+            this.Txt_cantidadEquipos.Size = new System.Drawing.Size(230, 23);
+            this.Txt_cantidadEquipos.TabIndex = 159;
             // 
             // Txt_codigoCampeonato
             // 
             this.Txt_codigoCampeonato.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_codigoCampeonato.Location = new System.Drawing.Point(448, 166);
+            this.Txt_codigoCampeonato.Location = new System.Drawing.Point(444, 202);
             this.Txt_codigoCampeonato.Name = "Txt_codigoCampeonato";
             this.Txt_codigoCampeonato.Size = new System.Drawing.Size(230, 23);
             this.Txt_codigoCampeonato.TabIndex = 165;
@@ -356,29 +323,66 @@
             // 
             this.Lbl_codigoCampeonato.AutoSize = true;
             this.Lbl_codigoCampeonato.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_codigoCampeonato.Location = new System.Drawing.Point(266, 169);
+            this.Lbl_codigoCampeonato.Location = new System.Drawing.Point(262, 205);
             this.Lbl_codigoCampeonato.Name = "Lbl_codigoCampeonato";
             this.Lbl_codigoCampeonato.Size = new System.Drawing.Size(152, 17);
             this.Lbl_codigoCampeonato.TabIndex = 164;
             this.Lbl_codigoCampeonato.Text = "Codigo Campeonato";
             // 
+            // Txt_precioCampeonato
+            // 
+            this.Txt_precioCampeonato.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_precioCampeonato.Location = new System.Drawing.Point(444, 348);
+            this.Txt_precioCampeonato.Name = "Txt_precioCampeonato";
+            this.Txt_precioCampeonato.Size = new System.Drawing.Size(230, 23);
+            this.Txt_precioCampeonato.TabIndex = 167;
+            // 
+            // Lbl_precioCampeonato
+            // 
+            this.Lbl_precioCampeonato.AutoSize = true;
+            this.Lbl_precioCampeonato.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_precioCampeonato.Location = new System.Drawing.Point(262, 351);
+            this.Lbl_precioCampeonato.Name = "Lbl_precioCampeonato";
+            this.Lbl_precioCampeonato.Size = new System.Drawing.Size(142, 17);
+            this.Lbl_precioCampeonato.TabIndex = 166;
+            this.Lbl_precioCampeonato.Text = "Precio Campeonato";
+            // 
+            // Btn_Regresar
+            // 
+            this.Btn_Regresar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Btn_Regresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Regresar.FlatAppearance.BorderSize = 0;
+            this.Btn_Regresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.Btn_Regresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Btn_Regresar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Regresar.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.Btn_Regresar.Image = global::Polideportivo_Administrativo.Properties.Resources.icons8_retroceder_50;
+            this.Btn_Regresar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Btn_Regresar.Location = new System.Drawing.Point(567, 69);
+            this.Btn_Regresar.Name = "Btn_Regresar";
+            this.Btn_Regresar.Size = new System.Drawing.Size(90, 75);
+            this.Btn_Regresar.TabIndex = 179;
+            this.Btn_Regresar.Text = "REGRESAR";
+            this.Btn_Regresar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Btn_Regresar.UseVisualStyleBackColor = false;
+            this.Btn_Regresar.Click += new System.EventHandler(this.Btn_Regresar_Click);
+            // 
             // frm_adminCampeonatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(910, 580);
+            this.ClientSize = new System.Drawing.Size(949, 607);
+            this.Controls.Add(this.Btn_Regresar);
+            this.Controls.Add(this.Txt_precioCampeonato);
+            this.Controls.Add(this.Lbl_precioCampeonato);
             this.Controls.Add(this.Txt_codigoCampeonato);
             this.Controls.Add(this.Lbl_codigoCampeonato);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.Lbl_horarioCampeonato);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.Lbl_diaCampeonato);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Txt_cantidadEquipos);
             this.Controls.Add(this.Lbl_cantidadEquipos);
             this.Controls.Add(this.Lbl_deporte);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.Txt_apellidoArbitro);
-            this.Controls.Add(this.Txt_nombreArbitro);
+            this.Controls.Add(this.Cbo_deportes);
+            this.Controls.Add(this.Txt_descripcionCampeonato);
+            this.Controls.Add(this.Txt_nombreCampeonato);
             this.Controls.Add(this.Lbl_descripcionCampeonato);
             this.Controls.Add(this.Lbl_nombreCampeonato);
             this.Controls.Add(this.Gpb_estado);
@@ -408,11 +412,8 @@
         private System.Windows.Forms.Button Btn_cerrar;
         private System.Windows.Forms.Label Lbl_administracionArbitros;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox Txt_apellidoArbitro;
-        private System.Windows.Forms.TextBox Txt_nombreArbitro;
         private System.Windows.Forms.Label Lbl_descripcionCampeonato;
         private System.Windows.Forms.Label Lbl_nombreCampeonato;
-        private System.Windows.Forms.GroupBox Gpb_estado;
         private System.Windows.Forms.RadioButton Rbd_deshabilitado;
         private System.Windows.Forms.RadioButton Rdb_habilitado;
         private System.Windows.Forms.Button Btn_salir;
@@ -420,15 +421,17 @@
         public System.Windows.Forms.Button Btn_modificar;
         public System.Windows.Forms.Button Btn_eliminar;
         public System.Windows.Forms.Button Btn_guardar;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label Lbl_deporte;
         private System.Windows.Forms.Label Lbl_cantidadEquipos;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label Lbl_diaCampeonato;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label Lbl_horarioCampeonato;
-        private System.Windows.Forms.TextBox textBox3;
         public System.Windows.Forms.TextBox Txt_codigoCampeonato;
         private System.Windows.Forms.Label Lbl_codigoCampeonato;
+        public System.Windows.Forms.ComboBox Cbo_deportes;
+        public System.Windows.Forms.TextBox Txt_descripcionCampeonato;
+        public System.Windows.Forms.TextBox Txt_nombreCampeonato;
+        public System.Windows.Forms.GroupBox Gpb_estado;
+        public System.Windows.Forms.TextBox Txt_cantidadEquipos;
+        public System.Windows.Forms.TextBox Txt_precioCampeonato;
+        private System.Windows.Forms.Label Lbl_precioCampeonato;
+        public System.Windows.Forms.Button Btn_Regresar;
     }
 }

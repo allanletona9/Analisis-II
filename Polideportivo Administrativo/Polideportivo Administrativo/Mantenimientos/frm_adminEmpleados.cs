@@ -15,6 +15,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
+using System.Net.NetworkInformation;
+using System.Data.SqlClient;
+using System.Net;
+
 namespace Polideportivo_Administrativo.Mantenimientos
 {
     public partial class frm_adminEmpleados : Form
@@ -22,11 +26,12 @@ namespace Polideportivo_Administrativo.Mantenimientos
         //Autor: Alejandro Barreda
         bool ingreso_presionado = false;
         bool modificar_presionado = false;
+        bool eliminar_presionado = false;
         OdbcCommand cmd;
 
         public frm_adminEmpleados()
         {
-
+          
             InitializeComponent();
         }
 
@@ -45,8 +50,7 @@ namespace Polideportivo_Administrativo.Mantenimientos
         private void Btn_salir_Click(object sender, EventArgs e)
         {
             this.Close();
-            frm_empleados empleados = new frm_empleados();
-            empleados.Show();
+            
         }
 
         //FUNCIONES PARA PODER BLOQUER O PERMITIR EDICIÓN Y SELECCION DE PARTE DEL USUARIO
@@ -85,7 +89,7 @@ namespace Polideportivo_Administrativo.Mantenimientos
         {
             habilitarBotones();
             bloquearBotones();
-            Txt_nombreEmpleado.Text = "";
+            Txt_nombreEmpleado.Text= "";
             Txt_apellidoEmpleado.Text = "";
             Txt_direccionEmpleado.Text = "";
             Txt_dpiEmpleado.Text = "";
@@ -93,9 +97,15 @@ namespace Polideportivo_Administrativo.Mantenimientos
             Gpb_estado.Enabled = false;
             ingreso_presionado = true;
         }
-
+        
         private void Btn_guardar_Click(object sender, EventArgs e)
         {
+
+            string host = Dns.GetHostName();
+            IPAddress[] IP = Dns.GetHostAddresses(host);
+            string sFecha = DateTime.Now.ToString("yyy/MM/dd");
+            string sHora = DateTime.Now.ToString("hh:mm:ss");
+
             if (ingreso_presionado == true)
             {
 
@@ -103,15 +113,15 @@ namespace Polideportivo_Administrativo.Mantenimientos
                 try
                 {
 
-                    if (Txt_nombreEmpleado.Text == "" || Txt_apellidoEmpleado.Text == "" || Txt_direccionEmpleado.Text == "" || Txt_telefonoEmpleado.Text == "")
+                    if (Txt_nombreEmpleado.Text == "" || Txt_apellidoEmpleado.Text == "" || Txt_direccionEmpleado.Text=="" || Txt_telefonoEmpleado.Text == "")
                     {
                         MessageBox.Show("Hacen Falta Campos Por Llenar", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ingresoCorrecto = false;
                     }
                     else
                     {
-                        cmd = new OdbcCommand("INSERT INTO tbl_empleados(nombre_empleado, apellido_empleado, direccion_empleado, dpi_empleado, telefono_empleado, estado_empleado) VALUES ('" + Txt_nombreEmpleado.Text + "', '" + Txt_apellidoEmpleado.Text + "','" + Txt_direccionEmpleado.Text +
-                           "','" + Txt_dpiEmpleado + "','" + Txt_telefonoEmpleado.Text + "', 1)", conexion.conectar());
+                        cmd = new OdbcCommand("INSERT INTO tbl_empleados(nombre_empleado, apellido_empleado, direccion_empleado, dpi_empleado, telefono_empleado, estado_empleado) VALUES ('" + Txt_nombreEmpleado.Text + "', '" +Txt_apellidoEmpleado.Text+"','"+ Txt_direccionEmpleado.Text +
+                           "','" + Txt_dpiEmpleado.Text + "','" +Txt_telefonoEmpleado.Text+"', 1)", conexion.conectar());
                         cmd.ExecuteNonQuery();
 
                     }
@@ -130,8 +140,12 @@ namespace Polideportivo_Administrativo.Mantenimientos
                     Txt_direccionEmpleado.Text = "";
                     Txt_dpiEmpleado.Text = "";
                     Txt_telefonoEmpleado.Text = "";
-
+                    Rdb_habilitado.Checked = false;
+                    Rbd_deshabilitado.Checked = false;
                     habilitarTodo();
+
+                    cmd = new OdbcCommand("INSERT INTO tbl_bitacora(PK_idUsuario, accion, fecha, hora, tabla, host) VALUES (1,'INSERTAR','" + sFecha + "','" + sHora + "', 'tbl_empleados', '" + host + "')", conexion.conectar());
+                    cmd.ExecuteNonQuery();
                 }
             }
             else if (modificar_presionado == true)
@@ -170,12 +184,66 @@ namespace Polideportivo_Administrativo.Mantenimientos
                     ingresoCorrecto = false;
                 }
 
+                if (ingresoCorrecto)
+                {
+                    MessageBox.Show("Empleado Modificado Correctamente");
+                    Txt_codigoEmpleado.Text = " ";
+                    Txt_nombreEmpleado.Text = " ";
+                    Txt_apellidoEmpleado.Text = " ";
+                    Txt_direccionEmpleado.Text = " ";
+                    Txt_dpiEmpleado.Text = " ";
+                    Txt_telefonoEmpleado.Text = " ";
+                    Rdb_habilitado.Checked = false;
+                    Rbd_deshabilitado.Checked = false;
+                    habilitarTodo();
+
+                    cmd = new OdbcCommand("INSERT INTO tbl_bitacora(PK_idUsuario, accion, fecha, hora, tabla, host) VALUES (1,'MODIFICAR','" + sFecha + "','" + sHora + "', 'tbl_empleados', '" + host + "')", conexion.conectar());
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            else if (eliminar_presionado == true)
+            {
+                bool ingresoCorrecto = true;
+                try
+                {
+                    cmd = new OdbcCommand("UPDATE tbl_empleados SET estado_empleado=0 WHERE PK_idEmpleado ='"
+                   + Txt_codigoEmpleado.Text + "'", conexion.conectar());
+                    cmd.ExecuteNonQuery();
+                }
+                catch (OdbcException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    ingresoCorrecto = false;
+                }
+
+                if (ingresoCorrecto)
+                {
+                    MessageBox.Show("Empleado Eliminado Correctamente");
+                    Txt_codigoEmpleado.Text = " ";
+                    Txt_nombreEmpleado.Text = " ";
+                    Txt_direccionEmpleado.Text = " ";
+                    Txt_dpiEmpleado.Text = " ";
+                    Txt_telefonoEmpleado.Text = " ";
+                    Rdb_habilitado.Checked = false;
+                    Rbd_deshabilitado.Checked = false;
+                    habilitarTodo();
+
+                    cmd = new OdbcCommand("INSERT INTO tbl_bitacora(PK_idUsuario, accion, fecha, hora, tabla, host) VALUES (1,'ELIMINAR','" + sFecha + "','" + sHora + "', 'tbl_empleados', '" + host + "')", conexion.conectar());
+                    cmd.ExecuteNonQuery();
+                }
             }
         }
-            private void Btn_modificar_Click(object sender, EventArgs e)
-            {
 
-            }
+        private void Txt_dpiEmpleado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_Regresar_Click(object sender, EventArgs e)
+        {
+            frm_empleados empleados = new frm_empleados();
+            empleados.Show();
+            this.Close();
         }
     }
-
+}

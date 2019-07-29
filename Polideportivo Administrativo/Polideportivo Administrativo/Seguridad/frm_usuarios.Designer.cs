@@ -67,7 +67,7 @@
             this.Btn_cerrar.BackgroundImage = global::Polideportivo_Administrativo.Properties.Resources.icons8_cerrar_ventana_48;
             this.Btn_cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_cerrar.ForeColor = System.Drawing.Color.DarkRed;
+            this.Btn_cerrar.ForeColor = System.Drawing.Color.Teal;
             this.Btn_cerrar.Location = new System.Drawing.Point(916, 3);
             this.Btn_cerrar.Name = "Btn_cerrar";
             this.Btn_cerrar.Size = new System.Drawing.Size(30, 29);

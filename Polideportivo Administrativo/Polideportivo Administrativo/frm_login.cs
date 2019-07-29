@@ -26,8 +26,8 @@ namespace Polideportivo_Administrativo
         conexion nueva = new conexion();
         public frm_login()
         {
-           
             InitializeComponent();
+            Txt_clave.UseSystemPasswordChar = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -70,9 +70,20 @@ namespace Polideportivo_Administrativo
                     , conexion.conectar());
                 cmd.ExecuteNonQuery();
 
+
+                cmd = new OdbcCommand("{ call procedimientoLoginAdministrador (?,?)}", conexion.conectar());
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@usuario1", OdbcType.Text).Value = Txt_Usuario.Text;
+                cmd.Parameters.Add("@contraseña", OdbcType.Text).Value = Txt_clave.Text;
+
+
+
+
+
                 cmd = new OdbcCommand("select PK_id_tipo_usuario FROM tbl_usuarios where nombre_usuario LIKE '%" + Txt_Usuario.Text
                     + "%' AND password_usuario LIKE '%" + Txt_clave.Text + "%'"
                     , conexion.conectar());
+
 
 
                 OdbcDataReader reader = cmd.ExecuteReader();

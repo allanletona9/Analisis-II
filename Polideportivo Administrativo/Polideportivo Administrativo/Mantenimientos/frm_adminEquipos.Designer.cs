@@ -46,6 +46,7 @@
             this.Btn_guardar = new System.Windows.Forms.Button();
             this.Lbl_codigoEquipo = new System.Windows.Forms.Label();
             this.Txt_codigoEquipo = new System.Windows.Forms.TextBox();
+            this.Btn_Regresar = new System.Windows.Forms.Button();
             this.Pnl_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Gpb_estado.SuspendLayout();
@@ -53,7 +54,7 @@
             // 
             // Pnl_titulo
             // 
-            this.Pnl_titulo.BackColor = System.Drawing.Color.DarkRed;
+            this.Pnl_titulo.BackColor = System.Drawing.Color.DarkSlateGray;
             this.Pnl_titulo.Controls.Add(this.Btn_cerrar);
             this.Pnl_titulo.Controls.Add(this.Lbl_administracionArbitros);
             this.Pnl_titulo.Controls.Add(this.pictureBox2);
@@ -61,7 +62,7 @@
             this.Pnl_titulo.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.Pnl_titulo.Location = new System.Drawing.Point(0, 0);
             this.Pnl_titulo.Name = "Pnl_titulo";
-            this.Pnl_titulo.Size = new System.Drawing.Size(910, 49);
+            this.Pnl_titulo.Size = new System.Drawing.Size(949, 35);
             this.Pnl_titulo.TabIndex = 9;
             // 
             // Btn_cerrar
@@ -69,10 +70,10 @@
             this.Btn_cerrar.BackgroundImage = global::Polideportivo_Administrativo.Properties.Resources.icons8_cerrar_ventana_48;
             this.Btn_cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_cerrar.ForeColor = System.Drawing.Color.DarkRed;
-            this.Btn_cerrar.Location = new System.Drawing.Point(864, 3);
+            this.Btn_cerrar.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.Btn_cerrar.Location = new System.Drawing.Point(916, 0);
             this.Btn_cerrar.Name = "Btn_cerrar";
-            this.Btn_cerrar.Size = new System.Drawing.Size(46, 43);
+            this.Btn_cerrar.Size = new System.Drawing.Size(30, 29);
             this.Btn_cerrar.TabIndex = 7;
             this.Btn_cerrar.UseVisualStyleBackColor = false;
             this.Btn_cerrar.Click += new System.EventHandler(this.Btn_cerrar_Click);
@@ -82,7 +83,7 @@
             this.Lbl_administracionArbitros.AutoSize = true;
             this.Lbl_administracionArbitros.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_administracionArbitros.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.Lbl_administracionArbitros.Location = new System.Drawing.Point(45, 12);
+            this.Lbl_administracionArbitros.Location = new System.Drawing.Point(45, 5);
             this.Lbl_administracionArbitros.Name = "Lbl_administracionArbitros";
             this.Lbl_administracionArbitros.Size = new System.Drawing.Size(314, 24);
             this.Lbl_administracionArbitros.TabIndex = 2;
@@ -91,7 +92,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Polideportivo_Administrativo.Properties.Resources.icons8_modo_deportes_24;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(27, 27);
             this.pictureBox2.TabIndex = 0;
@@ -178,7 +179,7 @@
             this.Btn_salir.ForeColor = System.Drawing.SystemColors.Desktop;
             this.Btn_salir.Image = global::Polideportivo_Administrativo.Properties.Resources.icons8_cerrar_ventana_481;
             this.Btn_salir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Btn_salir.Location = new System.Drawing.Point(582, 111);
+            this.Btn_salir.Location = new System.Drawing.Point(669, 111);
             this.Btn_salir.Name = "Btn_salir";
             this.Btn_salir.Size = new System.Drawing.Size(90, 75);
             this.Btn_salir.TabIndex = 149;
@@ -285,11 +286,32 @@
             this.Txt_codigoEquipo.Size = new System.Drawing.Size(230, 23);
             this.Txt_codigoEquipo.TabIndex = 156;
             // 
+            // Btn_Regresar
+            // 
+            this.Btn_Regresar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Btn_Regresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Regresar.FlatAppearance.BorderSize = 0;
+            this.Btn_Regresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.Btn_Regresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Btn_Regresar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Regresar.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.Btn_Regresar.Image = global::Polideportivo_Administrativo.Properties.Resources.icons8_retroceder_50;
+            this.Btn_Regresar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Btn_Regresar.Location = new System.Drawing.Point(582, 111);
+            this.Btn_Regresar.Name = "Btn_Regresar";
+            this.Btn_Regresar.Size = new System.Drawing.Size(90, 75);
+            this.Btn_Regresar.TabIndex = 179;
+            this.Btn_Regresar.Text = "REGRESAR";
+            this.Btn_Regresar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Btn_Regresar.UseVisualStyleBackColor = false;
+            this.Btn_Regresar.Click += new System.EventHandler(this.Btn_Regresar_Click);
+            // 
             // frm_adminEquipos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(910, 580);
+            this.ClientSize = new System.Drawing.Size(949, 607);
+            this.Controls.Add(this.Btn_Regresar);
             this.Controls.Add(this.Txt_codigoEquipo);
             this.Controls.Add(this.Lbl_codigoEquipo);
             this.Controls.Add(this.Txt_descripcionEquipo);
@@ -338,5 +360,6 @@
         private System.Windows.Forms.Label Lbl_codigoEquipo;
         public System.Windows.Forms.TextBox Txt_codigoEquipo;
         public System.Windows.Forms.Button Btn_ingresar;
+        public System.Windows.Forms.Button Btn_Regresar;
     }
 }

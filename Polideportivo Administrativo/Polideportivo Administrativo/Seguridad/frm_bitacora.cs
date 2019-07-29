@@ -42,7 +42,7 @@ namespace Polideportivo_Administrativo.Seguridad
             try
             {
                 ds = new DataSet();
-                dat = new OdbcDataAdapter("SELECT PK_idbitacora as Id,PK_idUsuario as Id_Usuario, accion as Accion,fecha as Fecha, Hora as Hora FROM `tbl_bitacora`", conexion.conectar());
+                dat = new OdbcDataAdapter("SELECT PK_idbitacora as Id,PK_idUsuario as Id_Usuario, accion as Accion,fecha as Fecha, Hora as Hora, host as Host FROM `tbl_bitacora`", conexion.conectar());
                 dat.Fill(ds);
                 dataGridView1.DataSource = ds.Tables[0];
             }

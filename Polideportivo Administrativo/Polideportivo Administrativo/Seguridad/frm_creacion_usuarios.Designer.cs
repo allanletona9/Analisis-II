@@ -38,11 +38,11 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Btn_guardar = new System.Windows.Forms.Button();
             this.Pnl_datos = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.puesto = new System.Windows.Forms.ComboBox();
             this.Gpb_estado = new System.Windows.Forms.GroupBox();
             this.Rdb_entrenador = new System.Windows.Forms.RadioButton();
             this.Rdb_empleado = new System.Windows.Forms.RadioButton();
-            this.puesto = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.Btn_salir = new System.Windows.Forms.Button();
             this.Pnl_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -105,7 +105,7 @@
             this.Btn_cerrar.BackgroundImage = global::Polideportivo_Administrativo.Properties.Resources.icons8_cerrar_ventana_48;
             this.Btn_cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_cerrar.ForeColor = System.Drawing.Color.DarkRed;
+            this.Btn_cerrar.ForeColor = System.Drawing.Color.Teal;
             this.Btn_cerrar.Location = new System.Drawing.Point(916, 3);
             this.Btn_cerrar.Name = "Btn_cerrar";
             this.Btn_cerrar.Size = new System.Drawing.Size(30, 29);
@@ -167,6 +167,26 @@
             this.Pnl_datos.Size = new System.Drawing.Size(443, 180);
             this.Pnl_datos.TabIndex = 207;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 137);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(34, 17);
+            this.label1.TabIndex = 225;
+            this.label1.Text = "Tipo";
+            // 
+            // puesto
+            // 
+            this.puesto.FormattingEnabled = true;
+            this.puesto.Location = new System.Drawing.Point(168, 136);
+            this.puesto.Name = "puesto";
+            this.puesto.Size = new System.Drawing.Size(230, 21);
+            this.puesto.TabIndex = 224;
+            this.puesto.Text = " ";
+            this.puesto.SelectedIndexChanged += new System.EventHandler(this.puesto_SelectedIndexChanged);
+            // 
             // Gpb_estado
             // 
             this.Gpb_estado.Controls.Add(this.Rdb_entrenador);
@@ -200,26 +220,6 @@
             this.Rdb_empleado.TabStop = true;
             this.Rdb_empleado.Text = " Empleado";
             this.Rdb_empleado.UseVisualStyleBackColor = true;
-            // 
-            // puesto
-            // 
-            this.puesto.FormattingEnabled = true;
-            this.puesto.Location = new System.Drawing.Point(168, 136);
-            this.puesto.Name = "puesto";
-            this.puesto.Size = new System.Drawing.Size(230, 21);
-            this.puesto.TabIndex = 224;
-            this.puesto.Text = " ";
-            this.puesto.SelectedIndexChanged += new System.EventHandler(this.puesto_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 137);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 17);
-            this.label1.TabIndex = 225;
-            this.label1.Text = "Tipo";
             // 
             // Btn_salir
             // 

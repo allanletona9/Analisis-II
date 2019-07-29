@@ -1,18 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
 using System.Data.Odbc;
-using System.Data.SqlClient;
 using System.Net;
-using System.Net.NetworkInformation;
 using Polideportivo_Administrativo;
+using System.Data;
 
 //Autor: Allan letona
 
@@ -22,6 +13,9 @@ namespace Polideportivo
     {
         //Autor Diego Gomez
         conexion nueva = new conexion();
+
+        String nombreUsuario, tipo;
+
         public Login()
         {
             InitializeComponent();
@@ -49,9 +43,9 @@ namespace Polideportivo
                 string host = Dns.GetHostName();
                 IPAddress[] IP = Dns.GetHostAddresses(host);
 
-
-
-                cmd = new OdbcCommand("INSERT INTO tbl_bitacora (PK_idBitacora," +
+                try
+                {
+                    cmd = new OdbcCommand("INSERT INTO tbl_bitacora (PK_idBitacora," +
                     "PK_idUsuario, " +
                     "accion, " +
                     "fecha, " +
@@ -66,55 +60,48 @@ namespace Polideportivo
                      ",' '" +
                      ")"
                     , conexion.conectar());
-                cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
 
-                cmd = new OdbcCommand("select PK_id_tipo_usuario FROM tbl_usuarios where nombre_usuario LIKE '%" + Txt_usuario.Text
-                    + "%' AND password_usuario LIKE '%" + Txt_clave.Text + "%'"
-                    , conexion.conectar());
+                }
+                catch (OdbcException) {
 
+                    MessageBox.Show("Error");
+                }
+
+                
+       
+                cmd = new OdbcCommand("{ call procedimientoLoginEntrenador (?,?)}", conexion.conectar());
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@usuario1", OdbcType.Text).Value = Txt_usuario.Text;
+                cmd.Parameters.Add("@contraseña", OdbcType.Text).Value = Txt_clave.Text;
 
                 OdbcDataReader reader = cmd.ExecuteReader();
-                String nombre = "";
+                int sIdEntrenador;
 
                 if (reader.HasRows)
                 {
                     while (reader.Read())
                     {
 
-                        nombre = reader.GetString(0);
-
-                        if (nombre == "1")
-                        {
-
-                            SeleccionarEquipo seleccionar = new SeleccionarEquipo("Login", null);
+                        sIdEntrenador = reader.GetInt32(0);
+                   
+                            SeleccionarEquipo seleccionar = new SeleccionarEquipo("Login", sIdEntrenador.ToString(),  null);
                             seleccionar.Show();
                             Hide();
                             Txt_usuario.Clear();
-                            Txt_clave.Clear();
-
-                        }
-                        if (nombre == "2")
-                        {
-                            SeleccionarEquipo seleccionar = new SeleccionarEquipo("Login", null);
-                            seleccionar.Show();
-                            Hide();
-                            Txt_usuario.Clear();
-                            Txt_clave.Clear();
-                        }
-                        if (nombre == "3")
-                        {
-                            SeleccionarEquipo seleccionar = new SeleccionarEquipo("Login", null);
-                            seleccionar.Show();
-                            Hide();
-                            Txt_usuario.Clear();
-                            Txt_clave.Clear();
-                        }
+                            Txt_clave.Clear();                
                     }
                 }
                 else
                 {
 
-                    cmd = new OdbcCommand("INSERT INTO tbl_bitacora (PK_idBitacora," +
+                    try
+                    {
+
+                    }
+                    catch (OdbcException)
+                    {
+                        cmd = new OdbcCommand("INSERT INTO tbl_bitacora (PK_idBitacora," +
                         "PK_idUsuario, " +
                         "accion, " +
                         "fecha, " +
@@ -129,10 +116,13 @@ namespace Polideportivo
                          ",' '" +
                          ")"
                         , conexion.conectar());
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Usuario o Contraseña equivocados,Vuelva a Intentar");
-                    Txt_usuario.Clear();
-                    Txt_clave.Clear();
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Usuario o Contraseña equivocados,Vuelva a Intentar");
+                        Txt_usuario.Clear();
+                        Txt_clave.Clear();
+                    }
+
+                   
                 }
             }
             
